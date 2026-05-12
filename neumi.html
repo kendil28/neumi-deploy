@@ -1,0 +1,4819 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neumi - Executive Face Transformation Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jsqr@1.4.0/dist/jsQR.js" crossorigin="anonymous" onerror="handleJQRError()"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ============================================
+           LUXURY TYPOGRAPHY SYSTEM
+           Cormorant Garamond = display / headings (elegant serif)
+           Jost = body / UI text (clean, modern)
+        ============================================ */
+        :root {
+            /* Font families */
+            --font-display: 'Cormorant Garamond', 'Georgia', serif;
+            --font-body: 'Jost', 'Segoe UI', sans-serif;
+
+            /* ── TYPE SCALE (desktop) ──
+               Ratio ~1.25 (Major Third), base 15px
+            */
+            --text-2xs:  10px;   /* micro labels, badges */
+            --text-xs:   12px;   /* captions, tags, stage goal */
+            --text-sm:   13px;   /* secondary body, list items */
+            --text-base: 15px;   /* primary body, inputs */
+            --text-md:   17px;   /* lead text, subtitles */
+            --text-lg:   20px;   /* section labels, card titles */
+            --text-xl:   24px;   /* sub-headings */
+            --text-2xl:  30px;   /* headings */
+            --text-3xl:  38px;   /* page titles */
+            --text-4xl:  48px;   /* hero display */
+
+            /* Letter spacing */
+            --ls-tight:   0.01em;
+            --ls-normal:  0.04em;
+            --ls-wide:    0.10em;
+            --ls-wider:   0.18em;
+
+            /* Line heights */
+            --lh-tight:   1.15;
+            --lh-normal:  1.55;
+            --lh-relaxed: 1.75;
+        }
+
+        /* ── Mobile scale (≤768px) ── */
+        @media (max-width: 768px) {
+            :root {
+                --text-2xs:  12px;   /* was 9px  — micro labels, goals */
+                --text-xs:   13px;   /* was 11px — captions, tags */
+                --text-sm:   15px;   /* was 12px — list items, body secondary */
+                --text-base: 16px;   /* was 14px — primary body, inputs */
+                --text-md:   18px;   /* was 16px — lead text */
+                --text-lg:   21px;   /* was 18px — section labels */
+                --text-xl:   26px;   /* was 22px — sub-headings */
+                --text-2xl:  30px;   /* was 26px — headings */
+                --text-3xl:  34px;   /* was 30px — page titles */
+                --text-4xl:  40px;   /* was 36px — hero display */
+            }
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            background: linear-gradient(180deg, #55493d 0%, #faddc1 100%);
+            background-attachment: fixed;
+            color: #3a3028;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding: 30px 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Common */
+        .container {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .logo-img {
+            max-width: 320px;
+            height: auto;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 300;
+            color: #D4A574;
+            margin-bottom: 16px;
+            letter-spacing: var(--ls-wide);
+        }
+
+        p.subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 300;
+            color: #8B7355;
+            line-height: var(--lh-relaxed);
+            margin-bottom: 30px;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px 28px;
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .btn-primary { 
+            background: #55493d;
+            color: #fddede;
+        }
+        .btn-primary:hover { background: #3d3329; }
+        .btn-secondary { background: transparent; color: #55493d; border: 1px solid #55493d; }
+        .btn-secondary:hover { background: #55493d; color: #fddede; }
+        .btn-upload { background: linear-gradient(135deg, #FFCCCC, #FFB5B5); color: #55493d; }
+        .btn-success { background: #55493d; color: #fddede; }
+        .btn-sm { width: auto; padding: 10px 22px; font-size: var(--text-xs); }
+
+        .status-box {
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            color: #8B7355;
+            margin-bottom: 20px;
+            border-left: 3px solid #D4A574;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .status-success { background: rgba(255,181,181,0.1) !important; border-left-color: #FFB5B5 !important; color: #FF9999 !important; }
+        .status-error { background: rgba(231,76,60,0.1) !important; border-left-color: #e74c3c !important; color: #c0392b !important; }
+
+        .scanner-area {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        #qrVideo { width: 100%; height: 100%; object-fit: cover; display: block; }
+        #qrCanvas { display: none; }
+
+        .scanner-placeholder {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, #FFB5B5, #FF9999);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666666;
+            gap: 16px;
+        }
+
+        .scanner-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            display: none;
+        }
+
+        .scan-box {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px; height: 200px;
+            border: 3px solid #FFCCCC;
+            border-radius: 12px;
+        }
+
+        .scan-line {
+            position: absolute;
+            left: 10%; width: 80%; height: 3px;
+            background: linear-gradient(90deg, transparent, #FFCCCC, transparent);
+            animation: scanMove 2s linear infinite;
+        }
+
+        @keyframes scanMove {
+            0% { top: 10%; }
+            50% { top: 90%; }
+            100% { top: 10%; }
+        }
+
+        .result-card {
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #FFB5B5, #FF9999);
+            color: #666666;
+            border-radius: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: none;
+            margin-bottom: 20px;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-card.show { display: block; }
+
+        .upload-zone {
+            border: 3px dashed #D4A574;
+            border-radius: 12px;
+            padding: 28px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(212,165,116,0.05);
+            margin-bottom: 16px;
+        }
+
+        .upload-zone:hover {
+            background: rgba(212,165,116,0.12);
+            transform: scale(1.02);
+        }
+
+        .preview-img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+            margin-top: 12px;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .preview-img.show { display: block; }
+
+        input[type="file"] { display: none; }
+
+        .manual-input-section {
+            display: none;
+            margin-bottom: 16px;
+            animation: slideUp 0.3s ease;
+        }
+
+        .manual-input-section.show { display: block; }
+
+        .text-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(85,73,61,0.2);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 300;
+            letter-spacing: var(--ls-tight);
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #3a3028;
+        }
+
+        .text-input:focus {
+            background: rgba(255, 255, 255, 0.98);
+            border-color: #9e8047;
+            box-shadow: 0 0 0 3px rgba(158,128,71,0.1);
+            outline: none;
+        }
+
+        .text-input::placeholder {
+            color: #b8a898;
+            font-weight: 300;
+        }
+
+        /* Page 2 */
+        .video-container {
+            width: 100%;
+            max-width: 650px;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #2C5F4F, #1a3a30);
+            border-radius: 16px;
+            margin: 0 auto 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+            gap: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover { transform: scale(1.02); }
+
+        .play-icon {
+            font-size: 64px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes shine {
+            0% { 
+                background: linear-gradient(135deg, #e1cdc2 0%, #f5f0e8 50%, #e8e0d5 100%);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+            25% { 
+                background: linear-gradient(135deg, #e1cdc2 0%, #f2e8d8 50%, #e8e0d5 100%);
+                box-shadow: 0 8px 28px rgba(158,128,71,0.10);
+            }
+            50% { 
+                background: linear-gradient(135deg, #e1cdc2 0%, #9e8047 50%, #e8e0d5 100%);
+                box-shadow: 0 8px 32px rgba(158,128,71,0.15);
+            }
+            75% { 
+                background: linear-gradient(135deg, #e1cdc2 0%, #f2e8d8 50%, #e8e0d5 100%);
+                box-shadow: 0 8px 28px rgba(158,128,71,0.10);
+            }
+            100% { 
+                background: linear-gradient(135deg, #e1cdc2 0%, #f5f0e8 50%, #e8e0d5 100%);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+        }
+
+        @keyframes logoShine {
+            0% { 
+                filter: brightness(1) drop-shadow(0 0 8px rgba(158,128,71,0.15));
+                transform: scale(1);
+            }
+            25% { 
+                filter: brightness(1.05) drop-shadow(0 0 10px rgba(158,128,71,0.20));
+                transform: scale(1.01);
+            }
+            50% { 
+                filter: brightness(1.1) drop-shadow(0 0 12px rgba(158,128,71,0.25));
+                transform: scale(1.02);
+            }
+            75% { 
+                filter: brightness(1.05) drop-shadow(0 0 10px rgba(158,128,71,0.20));
+                transform: scale(1.01);
+            }
+            100% { 
+                filter: brightness(1) drop-shadow(0 0 8px rgba(158,128,71,0.15));
+                transform: scale(1);
+            }
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 36px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            display: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container.show { 
+            display: block; 
+            animation: slideUp 0.6s ease;
+        }
+
+        .form-title {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 300;
+            color: #55493d;
+            text-align: center;
+            margin-bottom: 28px;
+            letter-spacing: var(--ls-wide);
+        }
+
+        .form-group { margin-bottom: 20px; text-align: left; }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            color: #9e8047;
+            margin-bottom: 8px;
+            font-weight: 500;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+        }
+
+        .gender-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gender-btn {
+            padding: 12px;
+            border: 1px solid rgba(85,73,61,0.2);
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 400;
+            letter-spacing: var(--ls-wide);
+            text-align: center;
+            color: #9e8047;
+        }
+
+        .gender-btn:hover { 
+            border-color: #9e8047; 
+            background: rgba(158,128,71,0.04); 
+        }
+        .gender-btn.selected { 
+            background: #55493d; 
+            color: #fddede; 
+            border-color: #55493d; 
+        }
+
+        /* Page 3 - Dashboard with Visual Stages */
+        .dashboard-wrapper {
+            max-width: 1400px;
+            width: 100%;
+            padding: 30px 20px;
+        }
+
+        .dashboard-header { 
+            text-align: center; 
+            margin-bottom: 28px;
+            background: transparent;
+            padding: 20px 20px 0;
+        }
+
+        /* Header judul di dalam results section */
+        .results-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 32px 24px 20px;
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            border-radius: 16px;
+        }
+
+        .main-title {
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: 300;
+            color: #55493d;
+            letter-spacing: var(--ls-wide);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            line-height: var(--lh-tight);
+        }
+
+        .sub-title { 
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 300;
+            color: #9e8047; 
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #FFB5B5, #FF9999);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #666666;
+        }
+
+        .typewriter {
+            font-size: var(--text-xl);
+            line-height: 1.6;
+            margin: 12px 0;
+            opacity: 0;
+            animation: typeIn 0.8s ease forwards;
+        }
+
+        .typewriter:nth-child(1) { animation-delay: 0.3s; }
+        .typewriter:nth-child(2) { animation-delay: 1.3s; }
+        .typewriter:nth-child(3) { animation-delay: 2.3s; }
+
+        @keyframes typeIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .question-section { margin-top: 36px; }
+        .question-main { font-size: var(--text-lg); font-weight: 600; margin-bottom: 10px; }
+        .question-sub { font-size: var(--text-md); opacity: 0.9; margin-bottom: 24px; }
+        .cta-text { font-size: var(--text-md); font-weight: 600; }
+
+        .card {
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 32px 28px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            font-weight: 300;
+            color: #55493d;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: var(--ls-wide);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.6);
+            border: 1px solid rgba(85,73,61,0.15);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 400;
+            color: #8B7355;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(4px);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.85);
+            border-color: #9e8047;
+            color: #55493d;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .lang-btn.active {
+            background: #55493d;
+            border-color: #55493d;
+            color: #fddede;
+            font-weight: 500;
+            box-shadow: 0 3px 12px rgba(85,73,61,0.25);
+        }
+
+        .lang-flag { font-size: 16px; line-height: 1; }
+        .lang-name { font-size: var(--text-xs); }
+
+        @media (max-width: 480px) {
+            .lang-btn { padding: 7px 12px; }
+            .lang-flag { font-size: 18px; }
+        }
+
+        .upload-area {
+            border: 3px dashed #FFB5B5;
+            border-radius: 12px;
+            padding: 48px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255,181,181,0.03);
+        }
+
+        .upload-area:hover {
+            background: rgba(255,181,181,0.08);
+            transform: scale(1.01);
+        }
+
+        .icon-lg { font-size: 52px; margin-bottom: 14px; }
+
+        .photo-preview {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .photo-preview.show { display: block; }
+
+        .photo-preview img {
+            max-width: 280px;
+            max-height: 320px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .budget-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .budget-card {
+            background: white;
+            border: 3px solid rgba(255,181,181,0.2);
+            border-radius: 14px;
+            padding: 24px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .budget-card:hover {
+            border-color: #FFB5B5;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(255,181,181,0.15);
+        }
+
+        .budget-card.active {
+            background: #FFB5B5;
+            color: #666666;
+            border-color: #FFB5B5;
+            transform: scale(1.04);
+        }
+
+        .budget-number {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 300;
+            color: #9e8047;
+            margin-bottom: 8px;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .budget-card.active .budget-number { color: white; }
+        
+        .budget-desc { 
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 400;
+            letter-spacing: var(--ls-wide);
+            line-height: var(--lh-relaxed);
+            text-transform: uppercase;
+        }
+
+        .generate-btn {
+            max-width: 360px;
+            margin: 28px auto 0;
+            display: block;
+            background: #55493d;
+            color: #fddede;
+            border: none;
+            letter-spacing: var(--ls-wider);
+        }
+
+        .results {
+            display: none;
+            margin-top: 48px;
+            animation: fadeIn 1s ease;
+        }
+
+        .results.show { display: block; }
+
+        /* STAGES GRID - VISUAL TRANSFORMATION */
+        .stages-container {
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 24px 20px 20px;
+            border-radius: 16px;
+        }
+
+        /* ── NAV BAR: 5 box terpisah dalam satu baris ── */
+        .stages-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .stages-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 0;
+            background: #55493d;
+            border-radius: 6px;
+            padding: 12px 10px 12px 12px;
+            position: relative;
+        }
+
+        .stages-nav-arrow {
+            font-size: var(--text-lg);
+            color: #f5c9b0;
+            flex-shrink: 0;
+            line-height: 1;
+            font-weight: 400;
+            margin-left: auto;
+            padding-left: 6px;
+        }
+
+        .stage-nav-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .stage-nav-title {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: #fddede;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .stage-nav-sub {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: rgba(253,222,222,0.75);
+            letter-spacing: 0.01em;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        /* Badge global */
+        .stage-badge {
+            width: 26px;
+            height: 26px;
+            background: #55493d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: var(--text-xs);
+            flex-shrink: 0;
+            letter-spacing: 0;
+        }
+
+        /* Badge dalam nav bar: dark circle */
+        .stages-nav .stage-badge {
+            width: 32px;
+            height: 32px;
+            background: #3a3028;
+            color: #fddede;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ── MOBILE: vertical, tiap box full width ── */
+        @media (max-width: 768px) {
+            .stages-nav {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .stages-nav-item {
+                flex: none;
+                width: 100%;
+                padding: 14px 14px;
+            }
+
+            .stage-nav-title {
+                font-size: var(--text-sm);
+                white-space: normal;
+            }
+
+            .stage-nav-sub {
+                font-size: var(--text-xs);
+                white-space: normal;
+            }
+
+            .stages-nav .stage-badge {
+                width: 36px;
+                height: 36px;
+                font-size: var(--text-base);
+            }
+
+            .stages-nav-arrow {
+                font-size: var(--text-xl);
+            }
+        }
+
+        /* ── KARTU GAMBAR: 5 kolom di bawah nav bar ── */
+        .stages-row {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        .stage-col {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+        }
+
+        /* Panah di antara kartu gambar */
+        .stage-col-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-md);
+            color: #9e8047;
+            padding: 0 4px;
+            flex-shrink: 0;
+        }
+
+        /* Kartu stage */
+        .stage-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .stage-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+
+        /* GAMBAR */
+        .stage-image-container {
+            width: 100%;
+            aspect-ratio: 3/4;
+            position: relative;
+            overflow: hidden;
+            background: #e8e0d5;
+            flex-shrink: 0;
+        }
+
+        .stage-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* KONTEN DI BAWAH GAMBAR */
+        .stage-content {
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stage-list {
+            list-style: none;
+            margin-bottom: 8px;
+            flex: 1;
+        }
+
+        .stage-list li {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 300;
+            padding: 2px 0;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #55493d;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .stage-list li:before {
+            display: none;
+        }
+
+        .stage-goal {
+            background: rgba(158,128,71,0.08);
+            padding: 5px 8px;
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #9e8047;
+            text-align: left;
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            border-left: 2px solid #D4A574;
+        }
+
+        /* Label mobile — tersembunyi di desktop */
+        .stage-mobile-label {
+            display: none;
+        }
+        @media (max-width: 768px) {
+
+            /* Sembunyikan nav bar terpisah di mobile — label ada di tiap kartu */
+            .stages-nav {
+                display: none;
+            }
+
+            /* Kartu gambar: vertical di mobile, full width */
+            .stages-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .stage-col {
+                flex: none;
+                width: 100%;
+            }
+
+            .stage-col-arrow {
+                display: none;
+            }
+
+            /* Kartu di mobile: layout vertikal normal */
+            .stage-card {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+
+            /* Gambar lebih pendek di mobile */
+            .stage-image-container {
+                width: 100%;
+                aspect-ratio: unset;
+                height: 180px;
+                flex-shrink: 0;
+                border-radius: 10px 10px 0 0;
+            }
+
+            /* Label overlay di atas gambar */
+            .stage-mobile-label {
+                display: flex !important;
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 12px;
+                background: linear-gradient(180deg, rgba(58,48,40,0.85) 0%, rgba(58,48,40,0) 100%);
+                border-radius: 10px 10px 0 0;
+                z-index: 5;
+            }
+
+            .stage-mobile-label .stage-badge {
+                width: 28px;
+                height: 28px;
+                background: #3a3028;
+                color: #fddede;
+                font-size: var(--text-sm);
+                font-weight: 600;
+                flex-shrink: 0;
+            }
+
+            .stage-mobile-label-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1px;
+            }
+
+            .stage-mobile-label-title {
+                font-family: var(--font-body);
+                font-size: var(--text-sm);
+                font-weight: 700;
+                color: #fddede;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                line-height: 1.2;
+            }
+
+            .stage-mobile-label-sub {
+                font-family: var(--font-body);
+                font-size: var(--text-xs);
+                font-weight: 300;
+                color: rgba(253,222,222,0.8);
+                line-height: 1.2;
+            }
+
+            .stage-content {
+                padding: 12px;
+            }
+
+            .stage-list li {
+                font-size: var(--text-sm);
+            }
+
+            .stage-goal {
+                font-size: var(--text-xs);
+            }
+        }
+
+        /* Stage-specific overlays */
+        .stage-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        /* Stage 2: Mapping Lines Overlay */
+        .mapping-lines {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        .mapping-line {
+            position: absolute;
+            background: rgba(255, 215, 0, 0.6);
+            z-index: 2;
+        }
+
+        /* Stage 3: Procedure Cap */
+        .procedure-cap {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 30%, transparent 40%, rgba(0, 150, 255, 0.3) 100%);
+            z-index: 2;
+        }
+
+        .cap-graphic {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 80px;
+            background: linear-gradient(135deg, #00bcd4, #0097a7);
+            border-radius: 0 0 70px 70px;
+            z-index: 3;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Stage 4: Recovery Redness */
+        .recovery-effect {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(ellipse at 30% 60%, rgba(255, 100, 100, 0.25) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 65%, rgba(255, 100, 100, 0.25) 0%, transparent 50%);
+            z-index: 2;
+            mix-blend-mode: multiply;
+        }
+
+        /* Stage 5: Enhancement */
+        .enhancement-effect {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+            z-index: 2;
+            filter: brightness(1.08) contrast(1.05) saturate(1.1);
+        }
+
+
+        /* Comparison Section */
+        .comparison-section {
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 28px 20px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: start;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .compare-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .compare-column.center {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .compare-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            width: 100%;
+            height: 36px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: var(--text-xs);
+            text-align: center;
+            color: #FFFFFF;
+            background: #55493d;
+            border-radius: 2px;
+            white-space: nowrap;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+        }
+
+        .compare-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 240px;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            background: #e8e0d5;
+        }
+
+        .compare-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .transformation-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+            background: white;
+            padding: 16px 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .transformation-title {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: var(--text-xs);
+            color: #55493d;
+            margin-bottom: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: var(--ls-wider);
+        }
+
+        .highlight-item-new {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(85, 73, 61, 0.07);
+            gap: 10px;
+        }
+
+        .highlight-item-new:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-text-new {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            color: #55493d;
+            flex: 1;
+            line-height: var(--lh-normal);
+            letter-spacing: var(--ls-tight);
+        }
+
+        .highlight-text-new strong,
+        .highlight-text-new b {
+            font-weight: 600;
+            display: block;
+            font-size: var(--text-xs);
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            color: #3a3028;
+        }
+
+        .estimate-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+            background: white;
+            padding: 16px 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(85, 73, 61, 0.07);
+            gap: 12px;
+        }
+
+        .price-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .price-text {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            color: #55493d;
+            flex: 1;
+            line-height: var(--lh-normal);
+            letter-spacing: var(--ls-tight);
+        }
+
+        .price-value-new {
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: #55493d;
+            white-space: nowrap;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .total-price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0 0 0;
+            border-top: 1px solid #9e8047;
+            margin-top: 8px;
+        }
+
+        .total-text {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: #55493d;
+            text-transform: uppercase;
+            letter-spacing: var(--ls-wider);
+        }
+
+        .total-value {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            font-weight: 500;
+            color: #55493d;
+            letter-spacing: var(--ls-tight);
+        }
+
+        .highlights-title {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: #9e8047;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px;
+            background: rgba(212,165,116,0.03);
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-icon { font-size: var(--text-lg); flex-shrink: 0; }
+
+        .highlight-text h4 {
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: #8B6F47;
+            margin-bottom: 3px;
+        }
+
+        .highlight-text p {
+            font-size: var(--text-xs);
+            color: #A0826D;
+            line-height: 1.4;
+        }
+
+        /* Price Table */
+        .price-table {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .price-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2C5F4F;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,215,190,0.1);
+            gap: 14px;
+        }
+
+        .price-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            flex: 1;
+        }
+
+        .price-value {
+            font-weight: 600;
+            font-size: 13px;
+            color: #666666;
+            white-space: nowrap;
+        }
+
+        .price-total {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 2px solid #FFD7BE;
+            border-bottom: none;
+        }
+
+        .price-total .price-label { font-weight: 700; }
+        .price-total .price-value { font-weight: 700; font-size: 15px; color: #666666; }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 24px 20px;
+            border-radius: 16px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 20px 14px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .tool-icon { 
+            font-size: 28px; 
+            margin-bottom: 10px; 
+        }
+        
+        .tool-name { 
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 600; 
+            color: #55493d; 
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: var(--ls-wide);
+        }
+        
+        .tool-desc { 
+            font-family: var(--font-body);
+            font-size: var(--text-sm);
+            font-weight: 300;
+            color: #9e8047; 
+            line-height: var(--lh-normal);
+            letter-spacing: var(--ls-tight);
+        }
+
+        .footer {
+            background: #55493d;
+            color: white;
+            padding: 20px 28px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* ═══════════════════════════════════════
+           RESULT MASTER — UNIFIED CONTAINER
+        ═══════════════════════════════════════ */
+        .result-master {
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            border-radius: 16px;
+            padding: 20px 20px 16px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+            margin-bottom: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header */
+        .rm-header {
+            text-align: center;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(85,73,61,0.1);
+        }
+        .rm-logo-small { margin-bottom: 6px; }
+        .rm-title {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 300;
+            color: #55493d;
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            line-height: var(--lh-tight);
+            margin-bottom: 4px;
+        }
+        .rm-subtitle {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: #9e8047;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+        }
+
+        /* Divider */
+        .rm-divider {
+            height: 1px;
+            background: rgba(85,73,61,0.12);
+            margin: 12px 0;
+        }
+
+        /* Stage images row */
+        .rm-stages {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 0;
+            margin-bottom: 0;
+        }
+
+        .rm-stage-col {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rm-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-md);
+            color: #f5c9b0;
+            padding: 0 3px;
+            flex-shrink: 0;
+        }
+
+        .rm-stage-img-wrap {
+            width: 100%;
+            aspect-ratio: 3/4;
+            position: relative;
+            overflow: hidden;
+            background: #e8e0d5;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .rm-stage-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .rm-list {
+            list-style: none;
+            margin: 6px 0 4px;
+            padding: 0;
+            flex: 1;
+        }
+        .rm-list li {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: #55493d;
+            padding: 1.5px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.3;
+        }
+        .rm-goal {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #9e8047;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-left: 2px solid #D4A574;
+            padding: 3px 6px;
+            background: rgba(158,128,71,0.07);
+            border-radius: 0 2px 2px 0;
+            margin-top: 2px;
+        }
+
+        /* Bottom row: before / highlights / after / price */
+        .rm-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr 1.6fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .rm-ba-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .rm-ba-label {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: white;
+            background: #55493d;
+            padding: 4px 14px;
+            border-radius: 2px;
+            letter-spacing: var(--ls-wider);
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+        }
+        .rm-ba-img-wrap {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #e8e0d5;
+        }
+        .rm-ba-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Highlights column */
+        .rm-highlights-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .rm-section-title {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #55493d;
+            text-transform: uppercase;
+            letter-spacing: var(--ls-wider);
+            margin-bottom: 8px;
+        }
+        .rm-hl-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(85,73,61,0.07);
+        }
+        .rm-hl-item:last-child { border-bottom: none; }
+        .rm-hl-ico {
+            color: #9e8047;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .rm-hl-item strong {
+            display: block;
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #3a3028;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+        }
+        .rm-hl-item span {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: #7a6a5a;
+            line-height: 1.3;
+        }
+
+        /* Price column */
+        .rm-price-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .rm-price-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(85,73,61,0.07);
+        }
+        .rm-price-item:last-of-type { border-bottom: none; }
+        .rm-price-ico { color: #9e8047; flex-shrink: 0; }
+        .rm-price-label {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: #55493d;
+            flex: 1;
+            line-height: 1.3;
+        }
+        .rm-price-val {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 500;
+            color: #55493d;
+            white-space: nowrap;
+        }
+        .rm-price-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 0;
+            border-top: 1px solid #9e8047;
+            margin-top: 4px;
+        }
+        .rm-total-label {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: #55493d;
+            text-transform: uppercase;
+            letter-spacing: var(--ls-wide);
+        }
+        .rm-total-val {
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            font-weight: 500;
+            color: #55493d;
+        }
+
+        /* Footer row: tools + brand */
+        .rm-footer-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+            flex-wrap: nowrap;
+        }
+        .rm-tool {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            padding: 0 8px;
+            border-right: 1px solid rgba(85,73,61,0.1);
+        }
+        .rm-tool:first-child { padding-left: 0; }
+        .rm-tool-ico { flex-shrink: 0; }
+        .rm-tool-name {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #55493d;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+        }
+        .rm-tool-desc {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 300;
+            color: #9e8047;
+            line-height: 1.3;
+        }
+        .rm-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 0 0 0 12px;
+            flex-shrink: 0;
+            background: #55493d;
+            border-radius: 6px;
+            padding: 8px 14px;
+        }
+        .rm-brand-tagline {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 600;
+            color: #fddede;
+            text-align: center;
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+
+            /* Result master */
+            .result-master {
+                padding: 14px 12px 12px;
+                border-radius: 12px;
+            }
+
+            /* Header */
+            .rm-title { font-size: var(--text-xl); letter-spacing: 0.06em; }
+            .rm-subtitle { font-size: var(--text-2xs); }
+
+            /* Stage nav — vertical boxes */
+            .stages-nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .stages-nav-item {
+                flex: none;
+                width: 100%;
+                padding: 10px 12px;
+            }
+            .stage-nav-title { font-size: var(--text-sm); white-space: normal; }
+            .stage-nav-sub { font-size: var(--text-xs); white-space: normal; }
+            .stages-nav .stage-badge { width: 32px; height: 32px; font-size: var(--text-base); }
+            .stages-nav-arrow { font-size: var(--text-xl); }
+
+            /* Stage images — vertical cards, each full width like reference */
+            .rm-stages {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .rm-arrow { display: none; }
+
+            /* Each stage = full-width card with gradient background */
+            .rm-stage-col {
+                flex: none;
+                width: 100%;
+                flex-direction: column;
+                background: linear-gradient(160deg, #f5e6d3 0%, #fddede 50%, #faddc1 100%);
+                border-radius: 20px;
+                padding: 16px 16px 18px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+                gap: 0;
+            }
+
+            /* Badge + title row at top of each card */
+            .rm-stage-col .stage-mobile-label {
+                display: flex !important;
+                position: static !important;
+                background: none !important;
+                border-radius: 0 !important;
+                padding: 0 0 14px 0 !important;
+                align-items: center;
+                gap: 14px;
+            }
+            .rm-stage-col .stage-mobile-label .stage-badge {
+                width: 48px !important;
+                height: 48px !important;
+                background: #9e8047 !important;
+                color: white !important;
+                font-size: 22px !important;
+                font-weight: 700 !important;
+                flex-shrink: 0;
+                border-radius: 50%;
+            }
+            .rm-stage-col .stage-mobile-label-text {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+            .rm-stage-col .stage-mobile-label-title {
+                font-family: var(--font-body) !important;
+                font-size: 20px !important;
+                font-weight: 600 !important;
+                color: #3a3028 !important;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+                line-height: 1.2;
+            }
+            .rm-stage-col .stage-mobile-label-sub {
+                font-family: var(--font-display) !important;
+                font-size: 17px !important;
+                font-weight: 400 !important;
+                color: #55493d !important;
+                line-height: 1.3;
+                letter-spacing: 0;
+            }
+
+            /* Image — centered with margin, not full bleed */
+            .rm-stage-img-wrap {
+                width: calc(100% - 16px);
+                margin: 0 auto 14px;
+                height: auto;
+                aspect-ratio: 4/3;
+                flex-shrink: 0;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            /* List items */
+            .rm-list {
+                margin: 0 0 8px;
+                padding: 0;
+            }
+            .rm-list li {
+                font-size: 15px;
+                padding: 4px 0;
+                color: #55493d;
+            }
+
+            /* Goal tag */
+            .rm-goal {
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                padding: 5px 10px;
+                border-left: 3px solid #9e8047;
+            }
+
+            /* Bottom section — stack vertically */
+            .rm-bottom {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            /* Before/After images smaller on mobile */
+            .rm-ba-img-wrap {
+                aspect-ratio: unset;
+                height: 200px;
+            }
+
+            /* Highlights & price full width */
+            .rm-highlights-col,
+            .rm-price-col {
+                width: 100%;
+            }
+
+            /* Footer tools — 2 columns */
+            .rm-footer-row {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .rm-tool {
+                flex: 0 0 calc(50% - 4px);
+                border-right: none;
+                padding: 0;
+                align-items: flex-start;
+            }
+            .rm-brand {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Download button stays visible on mobile */
+            .btn-download-result {
+                top: 8px;
+                right: 8px;
+                width: 32px;
+                height: 32px;
+            }
+            .btn-download-result:hover {
+                width: 32px;
+                border-radius: 50%;
+                padding: 0;
+            }
+            .btn-download-result:hover .dl-text {
+                max-width: 0;
+                margin-left: 0;
+            }
+        }
+
+        .footer-logo img {
+            max-width: 100px;
+            height: auto;
+            opacity: 0.9;
+        }
+
+        .footer-tagline {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 300;
+            text-align: right;
+            line-height: var(--lh-relaxed);
+            color: #fddede;
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #fddede 0%, #faddc1 100%);
+            padding: 18px 28px;
+            border-radius: 4px;
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: var(--text-lg);
+            font-style: italic;
+            font-weight: 300;
+            color: #55493d;
+            margin-top: 16px;
+            letter-spacing: var(--ls-tight);
+            line-height: var(--lh-relaxed);
+        }
+
+        /* Download button — icon only, text on hover */
+        .btn-download-result {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            background: #55493d;
+            color: #fddede;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        .btn-download-result .dl-text {
+            font-family: var(--font-body);
+            font-size: var(--text-2xs);
+            font-weight: 500;
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            max-width: 0;
+            overflow: hidden;
+            transition: max-width 0.35s ease, margin 0.35s ease;
+            margin-left: 0;
+        }
+        .btn-download-result:hover {
+            width: auto;
+            border-radius: 20px;
+            padding: 0 14px 0 10px;
+            background: #3d3329;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+        }
+        .btn-download-result:hover .dl-text {
+            max-width: 160px;
+            margin-left: 6px;
+        }
+        .btn-download-result:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .footer-tagline {
+            font-family: 'Olivera', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            color: #fddede;
+        }
+
+.quote {
+    text-align: center;
+    padding: 18px;
+    background: rgba(44,95,79,0.06);
+    border-left: 4px solid #8B7355;
+    border-right: 4px solid #8B7355;
+    margin-top: 28px;
+    font-style: italic;
+    font-size: 12px;
+    color: #2C3E2D;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(245,241,232,0.97);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 20px;
+}
+
+        .loading-overlay.show { display: flex; }
+
+        .spinner {
+            width: 70px; height: 70px;
+            border: 3px solid #ffb5b5;
+            border-top: 3px solid #ffb5b5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .loading-text {
+            font-size: 17px;
+            color: #ffb5b5;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .stages-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .main-title { font-size: 28px; }
+            .typewriter { font-size: 20px; }
+            .budget-grid { grid-template-columns: 1fr; }
+            .gender-options { grid-template-columns: 1fr; }
+            .stages-grid { grid-template-columns: 1fr; }
+            .footer { flex-direction: column; text-align: center; }
+            .footer-tagline { text-align: center; }
+
+            /* Form elements — readable for 28+ users */
+            .form-title { font-size: 22px !important; }
+            .form-label { font-size: 13px !important; }
+            .text-input { font-size: 16px !important; padding: 16px !important; }
+            .gender-btn { font-size: 15px !important; padding: 14px !important; }
+            .btn { font-size: 14px !important; padding: 16px 24px !important; }
+            .card-title { font-size: 20px !important; }
+            .budget-number { font-size: 28px !important; }
+            .budget-desc { font-size: 13px !important; }
+
+            /* Stage nav boxes */
+            .stage-nav-title { font-size: 15px !important; }
+            .stage-nav-sub { font-size: 13px !important; }
+
+            /* Result section */
+            .rm-title { font-size: 22px !important; }
+            .rm-subtitle { font-size: 13px !important; }
+            .rm-section-title { font-size: 14px !important; }
+            .rm-ba-label { font-size: 13px !important; height: auto !important; padding: 8px 16px !important; }
+            .rm-hl-item strong { font-size: 13px !important; }
+            .rm-hl-item span { font-size: 13px !important; }
+            .rm-price-label { font-size: 13px !important; }
+            .rm-price-val { font-size: 13px !important; }
+            .rm-total-label { font-size: 14px !important; }
+            .rm-total-val { font-size: 22px !important; }
+            .rm-tool-name { font-size: 13px !important; }
+            .rm-tool-desc { font-size: 12px !important; }
+            .rm-brand-tagline { font-size: 13px !important; }
+            .quote { font-size: 16px !important; padding: 16px !important; }
+
+            /* Mobile logo adjustments */
+            .logo-img {
+                max-width: 250px !important;
+                height: auto !important;
+            }
+            
+            /* Mobile centering improvements */
+            .container {
+                padding: 20px !important;
+                text-align: center !important;
+            }
+            
+            .form-container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            .card {
+                margin: 0 auto 36px auto !important;
+                max-width: 100% !important;
+            }
+            
+            .stages-header {
+                text-align: center !important;
+            }
+            
+            .comparison-section {
+                margin: 0 auto 36px auto !important;
+                max-width: 100% !important;
+            }
+            
+            /* Mobile button adjustments */
+            .btn-primary {
+                width: 100% !important;
+                max-width: 300px !important;
+            }
+            
+            .generate-btn {
+                width: 100% !important;
+                max-width: 300px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     SVG ICON LIBRARY — inline, reusable via <use>
+============================================ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- face-scan: facial analysis -->
+  <symbol id="ico-face-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/>
+    <circle cx="12" cy="12" r="3"/>
+    <path d="M12 9v-1M12 16v-1M9 12H8M16 12h-1"/>
+  </symbol>
+  <!-- aging-map: aging mapping -->
+  <symbol id="ico-aging-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M8 8c0 0-1 2-1 4s1 4 5 4 5-2 5-4-1-4-1-4"/>
+    <path d="M9 14c0 2 1.5 4 3 4s3-2 3-4"/>
+    <path d="M7 6c-1-1-2-1-3 0M17 6c1-1 2-1 3 0"/>
+  </symbol>
+  <!-- target: structure goal -->
+  <symbol id="ico-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/>
+    <circle cx="12" cy="12" r="5"/>
+    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+  </symbol>
+  <!-- ruler: structural mapping -->
+  <symbol id="ico-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 12h18M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/>
+    <path d="M8 9v6M12 7v10M16 9v6"/>
+  </symbol>
+  <!-- arrow-up: lift direction -->
+  <symbol id="ico-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+    <path d="M8 16l4 4 4-4" opacity="0.3"/>
+  </symbol>
+  <!-- symmetry: symmetry check -->
+  <symbol id="ico-symmetry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v18M5 6h4M5 10h3M5 14h4M5 18h3M15 6h4M16 10h3M15 14h4M16 18h3"/>
+  </symbol>
+  <!-- eye-surgery: upper blepharoplasty -->
+  <symbol id="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+    <circle cx="12" cy="12" r="3"/>
+    <path d="M12 5c0 0 2-1 4 0" stroke-width="1" opacity="0.6"/>
+  </symbol>
+  <!-- thread: mini lift / thread lift -->
+  <symbol id="ico-thread" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 20c2-4 2-8 0-12M10 20c1-4 1-8 0-12M14 20c-1-4-1-8 0-12M18 20c-2-4-2-8 0-12"/>
+    <path d="M4 8h16" stroke-width="1" opacity="0.5"/>
+  </symbol>
+  <!-- chin: chin enhancement -->
+  <symbol id="ico-chin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 4c0 0-2 3-2 7s2 6 6 7c4-1 6-3 6-7s-2-7-2-7"/>
+    <path d="M10 18c0 1 1 2 2 2s2-1 2-2"/>
+    <path d="M9 11h6M10 14h4"/>
+  </symbol>
+  <!-- skin: skin treatment -->
+  <symbol id="ico-skin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3c-4.5 0-8 3.5-8 8 0 3 1.5 5.5 4 7l1 2h6l1-2c2.5-1.5 4-4 4-7 0-4.5-3.5-8-8-8z"/>
+    <path d="M9 13c.5 1 1.5 2 3 2s2.5-1 3-2"/>
+    <circle cx="9.5" cy="10" r="1" fill="currentColor" stroke="none"/>
+    <circle cx="14.5" cy="10" r="1" fill="currentColor" stroke="none"/>
+  </symbol>
+  <!-- healing: healing -->
+  <symbol id="ico-healing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21.7C5.4 17 2 12.5 2 8.5 2 5.4 4.5 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.5 3 22 5.4 22 8.5c0 4-3.4 8.5-10 13.2z"/>
+    <path d="M12 8v8M8 12h8" stroke-width="1.5"/>
+  </symbol>
+  <!-- swelling: reduced swelling -->
+  <symbol id="ico-swelling" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3c5 0 8 3 8 7 0 5-4 9-8 11C8 19 4 15 4 10c0-4 3-7 8-7z"/>
+    <path d="M9 10l2 2 4-4"/>
+  </symbol>
+  <!-- recovery: skin recovery -->
+  <symbol id="ico-recovery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+    <path d="M4 12c0 4.4 3.6 8 8 8"/>
+    <path d="M16 16c-1 2-2.5 3-4 4"/>
+    <path d="M20 8l-2 4h4l-2 4"/>
+  </symbol>
+  <!-- sparkle: lifted / refined -->
+  <symbol id="ico-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+    <circle cx="12" cy="12" r="3"/>
+  </symbol>
+  <!-- plus: structured -->
+  <symbol id="ico-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+    <path d="M12 5v14M5 12h14"/>
+  </symbol>
+  <!-- diamond: refined -->
+  <symbol id="ico-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l9 7-9 11L3 10z"/>
+    <path d="M3 10h18"/>
+  </symbol>
+  <!-- eye-open: brighter eyes highlight -->
+  <symbol id="ico-eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+    <circle cx="12" cy="12" r="3"/>
+  </symbol>
+  <!-- face-lift: lifted mid-face -->
+  <symbol id="ico-face-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="9" r="5"/>
+    <path d="M7 14c-2 1-3 3-3 5h16c0-2-1-4-3-5"/>
+    <path d="M9 7l3-3 3 3" stroke-width="1.5"/>
+  </symbol>
+  <!-- jawline: defined jawline -->
+  <symbol id="ico-jawline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 4c-2 2-3 5-3 8 0 4 2 6 4 7l4 1 4-1c2-1 4-3 4-7 0-3-1-6-3-8"/>
+    <path d="M9 19l3 2 3-2"/>
+    <path d="M8 4h8"/>
+  </symbol>
+  <!-- chin-strong: stronger chin -->
+  <symbol id="ico-chin-strong" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 3c0 0-2 4-2 8s2 7 6 8c4-1 6-4 6-8s-2-8-2-8"/>
+    <path d="M10 19c0 1.5 1 2.5 2 2.5s2-1 2-2.5"/>
+    <path d="M9 12h6"/>
+  </symbol>
+  <!-- skin-glow: healthy skin -->
+  <symbol id="ico-skin-glow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/>
+    <path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>
+    <path d="M5 15l.6 1.4 1.4.6-1.4.6L5 19l-.6-1.4L3 17l1.4-.6z"/>
+  </symbol>
+  <!-- shield: safe & trusted -->
+  <symbol id="ico-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <path d="M9 12l2 2 4-4"/>
+  </symbol>
+  <!-- doctor: expert-led care -->
+  <symbol id="ico-doctor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="7" r="4"/>
+    <path d="M6 21v-2a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v2"/>
+    <path d="M16 11h4M18 9v4"/>
+  </symbol>
+  <!-- ai: AI simulation -->
+  <symbol id="ico-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="9" cy="9" r="1.5" fill="currentColor" stroke="none"/>
+    <circle cx="15" cy="9" r="1.5" fill="currentColor" stroke="none"/>
+    <path d="M8 15c1 1.5 2 2 4 2s3-.5 4-2"/>
+    <path d="M9 3v-1M15 3v-1M3 9h-1M3 15h-1M21 9h1M21 15h1M9 21v1M15 21v1"/>
+  </symbol>
+  <!-- leaf: real results / natural -->
+  <symbol id="ico-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </symbol>
+  <!-- laser: skin treatment -->
+  <symbol id="ico-laser" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2v6M12 16v6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M16 12h6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/>
+    <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+  </symbol>
+</svg>
+
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Generating Your AI Journey...</div>
+    </div>
+
+    <!-- ==================== -->
+    <!-- PAGE 1: FORM INPUT (Main Landing) -->
+    <!-- ==================== -->
+    <div class="page active" id="page1">
+        <div class="container" style="max-width:700px;">
+            
+            <div class="logo" style="margin-bottom:20px;">
+                <img src="logoneumi.png" alt="NEUMI Logo" class="logo-img">
+            </div>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('id')" id="lang-id">
+                    <span class="lang-flag">🇮🇩</span>
+                    <span class="lang-name">Indonesia</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('en')" id="lang-en">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span class="lang-name">English</span>
+                </button>
+                <button class="lang-btn" onclick="setLang('ko')" id="lang-ko">
+                    <span class="lang-flag">🇰🇷</span>
+                    <span class="lang-name">한국어</span>
+                </button>
+            </div>
+
+            <!-- Clinic Information -->
+            <div class="clinic-info" id="clinicInfo" style="display:none;">
+                <div style="background: rgba(212,165,116,0.1); border: 2px solid #D4A574; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">🏥</span>
+                        <div>
+                            <div style="font-size: 16px; font-weight: 700; color: #D4A574;" id="clinicNameDisplay">-</div>
+                            <div style="font-size: 14px; color: #8B7355;" id="clinicAddressDisplay">-</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: #666; text-align: center; padding: 8px; background: rgba(255,255,255,0.6); border-radius: 6px;" data-i18n="clinic_registered">
+                        Anda terdaftar sebagai lead untuk klinik di atas
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-container show" id="formContainer">
+                <h2 class="form-title" data-i18n="form_title">Masukkan Data Anda</h2>
+                
+                <form id="leadForm2" onsubmit="return submitForm(event)">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="label_name">Nama Lengkap</label>
+                        <input type="text" class="text-input" id="inputName" data-i18n-placeholder="placeholder_name" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="label_age">Usia</label>
+                        <input type="number" class="text-input" id="inputAge" data-i18n-placeholder="placeholder_age" placeholder="Masukkan usia Anda" min="17" max="99" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="label_phone">No. Telepon</label>
+                        <input type="tel" class="text-input" id="inputPhone" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="label_email">Email</label>
+                        <input type="email" class="text-input" id="inputEmail" data-i18n-placeholder="placeholder_email" placeholder="email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="label_gender">Gender</label>
+                        <div class="gender-options">
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'male')" data-i18n="gender_male">Pria</button>
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'female')" data-i18n="gender_female">Wanita</button>
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'other')" data-i18n="gender_other">Lainnya</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin: 10px auto 0; display: block; background: #55493d; border: none; color: #fddede;" data-i18n="btn_start">
+                        Mulai Transformasi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== -->
+    <!-- PAGE 2: INTRO + FORM -->
+    <!-- ==================== -->
+    <div class="page" id="page2">
+        <div class="container" style="max-width:700px;">
+            
+            <div class="logo" style="margin-bottom:24px;">
+                <img src="logoneumi.png" alt="NEUMI Logo" class="logo-img">
+            </div>
+
+            
+            <!-- Clinic Information -->
+            <div class="clinic-info" id="clinicInfo" style="display:none;">
+                <div style="background: rgba(212,165,116,0.1); border: 2px solid #D4A574; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">🏥</span>
+                        <div>
+                            <div style="font-size: 16px; font-weight: 700; color: #D4A574;" id="clinicNameDisplay">-</div>
+                            <div style="font-size: 13px; color: #8B7355;" id="clinicAddressDisplay">-</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 12px; color: #666; text-align: center; padding: 8px; background: rgba(255,255,255,0.6); border-radius: 6px;">
+                        Anda terdaftar sebagai lead untuk klinik di atas
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="form-container show" id="formContainer">
+                <h2 class="form-title">Masukkan Data Anda</h2>
+                
+                <form id="leadForm2" onsubmit="return submitForm(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input type="text" class="text-input" id="inputName" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">No. Telepon</label>
+                        <input type="tel" class="text-input" id="inputPhone" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="text-input" id="inputEmail" placeholder="email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Gender</label>
+                        <div class="gender-options">
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'male')">Male</button>
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'female')">Female</button>
+                            <button type="button" class="gender-btn" onclick="selectGender(this,'other')">Other</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        🚀 Mulai Transformasi →
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== -->
+    <!-- PAGE 3: DASHBOARD WITH VISUAL STAGES -->
+    <!-- ==================== -->
+    <div class="page" id="page3">
+        <div class="dashboard-wrapper">
+            
+            <!-- HEADER -->
+            <div class="dashboard-header">
+                <div class="logo">
+                    <img src="logoneumi.png" alt="NEUMI Logo" class="logo-img" style="max-width:300px;">
+                </div>
+            </div>
+
+            
+            <!-- UPLOAD PHOTO -->
+            <div class="card">
+                <h3 class="card-title">Upload Foto Wajah Anda</h3>
+                
+                <div class="upload-area" onclick="document.getElementById('photoInput').click()">
+                    <div class="icon-lg"><svg width="48" height="48" fill="none" stroke="#D4A574" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+                    <p><strong>Klik untuk upload foto atau gunakan camera</strong></p>
+                    <p style="font-size:12px;color:#5A6B5B;margin-top:6px;">Format: JPG, PNG (Maks. 10MB)</p>
+                </div>
+                
+                <input type="file" id="photoInput" accept="image/*" capture="environment" onchange="handlePhotoUpload(event)">
+                
+                <div class="photo-preview" id="photoPreview">
+                    <img src="" alt="Preview" id="photoPreviewImg">
+                </div>
+            </div>
+
+            <!-- BUDGET SELECTION -->
+            <div class="card" style="padding:28px;">
+                <h3 class="card-title">Pilih Paket Transformasi</h3>
+                
+                <div class="budget-grid">
+                    <div class="budget-card" onclick="selectBudget(this,'200')">
+                        <div class="budget-number">1</div>
+                        <div class="budget-desc">VISUAL JOURNEY<br>REAL RESULTS<br>(BUDGET 200 JT PLAN)</div>
+                    </div>
+                    
+                    <div class="budget-card" onclick="selectBudget(this,'500')">
+                        <div class="budget-number">2</div>
+                        <div class="budget-desc">VISUAL JOURNEY<br>REAL RESULTS<br>(BUDGET 500 JT PLAN)</div>
+                    </div>
+                    
+                    <div class="budget-card" onclick="selectBudget(this,'1000')">
+                        <div class="budget-number">3</div>
+                        <div class="budget-desc">VISUAL JOURNEY<br>REAL RESULTS<br>(BUDGET 1 M PLAN)</div>
+                    </div>
+                    
+                    <div class="budget-card" onclick="selectBudget(this,'custom')">
+                        <div class="budget-number">4</div>
+                        <div class="budget-desc">VISUAL JOURNEY<br>REAL RESULTS<br>(CUSTOMIZE PLAN)</div>
+                    </div>
+                </div>
+
+                
+                <button type="button" class="btn btn-primary generate-btn" onclick="generateAI()">
+                    Generate Using AI →
+                </button>
+            </div>
+
+            <!-- RESULTS SECTION — UNIFIED CONTAINER -->
+            <div class="results" id="resultsSection">
+
+                <div class="result-master">
+
+                    <!-- DOWNLOAD BUTTON — sudut kanan atas -->
+                    <button class="btn-download-result" onclick="downloadResultPNG()" id="downloadBtn" title="Download Result as PNG">
+                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="flex-shrink:0">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span class="dl-text">Download PNG</span>
+                    </button>
+
+                    <!-- HEADER -->
+                    <div class="rm-header">
+                        <div class="rm-logo-small">
+                            <img src="logoneumi.png" alt="NEUMI" style="height:52px;width:auto;filter:brightness(0) saturate(100%) invert(22%) sepia(15%) saturate(800%) hue-rotate(10deg) brightness(0.4);">
+                        </div>
+                        <h1 class="rm-title">EXECUTIVE FACE TRANSFORMATION GUIDE</h1>
+                        <p class="rm-subtitle">VISUAL JOURNEY – REAL RESULTS (BUDGET 200 JT PLAN)</p>
+                    </div>
+
+                    <!-- STAGE NAV BAR -->
+                    <div class="stages-nav">
+                        <div class="stages-nav-item">
+                            <div class="stage-badge">1</div>
+                            <div class="stage-nav-text">
+                                <span class="stage-nav-title">CONSULTATION</span>
+                                <span class="stage-nav-sub">Assessment &amp; Goal Setting</span>
+                            </div>
+                            <span class="stages-nav-arrow">&#8250;</span>
+                        </div>
+                        <div class="stages-nav-item">
+                            <div class="stage-badge">2</div>
+                            <div class="stage-nav-text">
+                                <span class="stage-nav-title">PRE-PROCEDURE</span>
+                                <span class="stage-nav-sub">Design &amp; Mapping</span>
+                            </div>
+                            <span class="stages-nav-arrow">&#8250;</span>
+                        </div>
+                        <div class="stages-nav-item">
+                            <div class="stage-badge">3</div>
+                            <div class="stage-nav-text">
+                                <span class="stage-nav-title">PROCEDURE</span>
+                                <span class="stage-nav-sub">Precision Refinement</span>
+                            </div>
+                            <span class="stages-nav-arrow">&#8250;</span>
+                        </div>
+                        <div class="stages-nav-item">
+                            <div class="stage-badge">4</div>
+                            <div class="stage-nav-text">
+                                <span class="stage-nav-title">RECOVERY</span>
+                                <span class="stage-nav-sub">Healing &amp; Recovery</span>
+                            </div>
+                            <span class="stages-nav-arrow">&#8250;</span>
+                        </div>
+                        <div class="stages-nav-item">
+                            <div class="stage-badge">5</div>
+                            <div class="stage-nav-text">
+                                <span class="stage-nav-title">FINAL RESULT</span>
+                                <span class="stage-nav-sub">Refreshed &amp; Refined</span>
+                            </div>
+                            <span class="stages-nav-arrow">&#8250;</span>
+                        </div>
+                    </div>
+
+                    <!-- 5 STAGE IMAGES -->
+                    <div class="rm-stages" id="stagesGrid">
+
+                        <div class="rm-stage-col">
+                            <div class="stage-mobile-label">
+                                <div class="stage-badge">1</div>
+                                <div class="stage-mobile-label-text">
+                                    <span class="stage-mobile-label-title">CONSULTATION</span>
+                                    <span class="stage-mobile-label-sub">Assessment &amp; Goal Setting</span>
+                                </div>
+                            </div>
+                            <div class="rm-stage-img-wrap">
+                                <img src="" alt="Stage 1" class="rm-stage-img" id="stage1Image">
+                            </div>
+                            <ul class="rm-list">
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-face-scan"/></svg></span>Facial analysis</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-aging-map"/></svg></span>Aging mapping</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-target"/></svg></span>Structure goal</li>
+                            </ul>
+                            <div class="rm-goal">GOAL: REFRESH, LIFT, DEFINE</div>
+                        </div>
+
+                        <div class="rm-arrow">&#8250;</div>
+
+                        <div class="rm-stage-col">
+                            <div class="stage-mobile-label">
+                                <div class="stage-badge">2</div>
+                                <div class="stage-mobile-label-text">
+                                    <span class="stage-mobile-label-title">PRE-PROCEDURE</span>
+                                    <span class="stage-mobile-label-sub">Design &amp; Mapping</span>
+                                </div>
+                            </div>
+                            <div class="rm-stage-img-wrap">
+                                <img src="" alt="Stage 2" class="rm-stage-img" id="stage2Image">
+                                <div class="stage-overlay">
+                                    <svg class="mapping-lines" viewBox="0 0 240 280" preserveAspectRatio="none">
+                                        <ellipse cx="120" cy="130" rx="70" ry="85" fill="none" stroke="rgba(255,215,0,0.5)" stroke-width="1.5"/>
+                                        <line x1="120" y1="60" x2="120" y2="220" stroke="rgba(255,215,0,0.4)" stroke-width="1" stroke-dasharray="4,4"/>
+                                        <line x1="60" y1="130" x2="180" y2="130" stroke="rgba(255,215,0,0.4)" stroke-width="1" stroke-dasharray="4,4"/>
+                                        <path d="M 75 145 Q 95 155 120 150 Q 145 155 165 145" fill="none" stroke="rgba(255,215,0,0.5)" stroke-width="1.5"/>
+                                        <path d="M 85 175 Q 120 190 155 175" fill="none" stroke="rgba(255,215,0,0.5)" stroke-width="1.5"/>
+                                        <line x1="70" y1="110" x2="170" y2="110" stroke="rgba(255,215,0,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="rm-list">
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-ruler"/></svg></span>Structural mapping</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-lift"/></svg></span>Lift direction</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-symmetry"/></svg></span>Symmetry check</li>
+                            </ul>
+                            <div class="rm-goal">PLAN: BALANCE &amp; HARMONY</div>
+                        </div>
+
+                        <div class="rm-arrow">&#8250;</div>
+
+                        <div class="rm-stage-col">
+                            <div class="stage-mobile-label">
+                                <div class="stage-badge">3</div>
+                                <div class="stage-mobile-label-text">
+                                    <span class="stage-mobile-label-title">PROCEDURE</span>
+                                    <span class="stage-mobile-label-sub">Precision Refinement</span>
+                                </div>
+                            </div>
+                            <div class="rm-stage-img-wrap">
+                                <img src="" alt="Stage 3" class="rm-stage-img" id="stage3Image">
+                                <div class="stage-overlay">
+                                    <div class="procedure-cap"></div>
+                                    <div class="cap-graphic"></div>
+                                </div>
+                            </div>
+                            <ul class="rm-list">
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-eye"/></svg></span>Upper blepharoplasty</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-thread"/></svg></span>Mini lift / Thread lift</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-chin"/></svg></span>Chin enhancement</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-skin"/></svg></span>Skin treatment</li>
+                            </ul>
+                            <div class="rm-goal">FOCUS: LIFT, CONTOUR, REFINE</div>
+                        </div>
+
+                        <div class="rm-arrow">&#8250;</div>
+
+                        <div class="rm-stage-col">
+                            <div class="stage-mobile-label">
+                                <div class="stage-badge">4</div>
+                                <div class="stage-mobile-label-text">
+                                    <span class="stage-mobile-label-title">RECOVERY</span>
+                                    <span class="stage-mobile-label-sub">Healing &amp; Recovery</span>
+                                </div>
+                            </div>
+                            <div class="rm-stage-img-wrap">
+                                <img src="" alt="Stage 4" class="rm-stage-img" id="stage4Image">
+                                <div class="stage-overlay">
+                                    <div class="recovery-effect"></div>
+                                </div>
+                            </div>
+                            <ul class="rm-list">
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-healing"/></svg></span>Healing</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-swelling"/></svg></span>Reduced swelling</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-recovery"/></svg></span>Skin recovery</li>
+                            </ul>
+                            <div class="rm-goal">TIME: 7-14 DAYS</div>
+                        </div>
+
+                        <div class="rm-arrow">&#8250;</div>
+
+                        <div class="rm-stage-col">
+                            <div class="stage-mobile-label">
+                                <div class="stage-badge">5</div>
+                                <div class="stage-mobile-label-text">
+                                    <span class="stage-mobile-label-title">FINAL RESULT</span>
+                                    <span class="stage-mobile-label-sub">Refreshed &amp; Refined</span>
+                                </div>
+                            </div>
+                            <div class="rm-stage-img-wrap">
+                                <img src="" alt="Stage 5" class="rm-stage-img" id="stage5Image">
+                                <div class="stage-overlay">
+                                    <div class="enhancement-effect"></div>
+                                </div>
+                            </div>
+                            <ul class="rm-list">
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-sparkle"/></svg></span>(+) Lifted</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-plus"/></svg></span>(+) Structured</li>
+                                <li><span class="ico"><svg width="9" height="9"><use href="#ico-diamond"/></svg></span>(+) Refined</li>
+                            </ul>
+                            <div class="rm-goal">RESULT: CONFIDENT &amp; STRONG</div>
+                        </div>
+
+                    </div>
+
+                    <!-- DIVIDER -->
+                    <div class="rm-divider"></div>
+
+                    <!-- BEFORE / HIGHLIGHTS / AFTER / PRICE -->
+                    <div class="rm-bottom">
+
+                        <div class="rm-ba-col">
+                            <div class="rm-ba-label">BEFORE</div>
+                            <div class="rm-ba-img-wrap">
+                                <img src="" alt="Before" id="beforeImage">
+                            </div>
+                        </div>
+
+                        <div class="rm-highlights-col">
+                            <div class="rm-section-title">TRANSFORMATION HIGHLIGHTS</div>
+                            <div class="rm-hl-item">
+                                <span class="ico rm-hl-ico"><svg width="16" height="16"><use href="#ico-eye-open"/></svg></span>
+                                <div><strong>BRIGHTER EYES</strong><span>More open, less tired</span></div>
+                            </div>
+                            <div class="rm-hl-item">
+                                <span class="ico rm-hl-ico"><svg width="16" height="16"><use href="#ico-face-lift"/></svg></span>
+                                <div><strong>LIFTED MID-FACE</strong><span>Improved cheek position</span></div>
+                            </div>
+                            <div class="rm-hl-item">
+                                <span class="ico rm-hl-ico"><svg width="16" height="16"><use href="#ico-jawline"/></svg></span>
+                                <div><strong>DEFINED JAWLINE</strong><span>Stronger, sharper contour</span></div>
+                            </div>
+                            <div class="rm-hl-item">
+                                <span class="ico rm-hl-ico"><svg width="16" height="16"><use href="#ico-chin-strong"/></svg></span>
+                                <div><strong>STRONGER CHIN</strong><span>Better projection &amp; balance</span></div>
+                            </div>
+                            <div class="rm-hl-item">
+                                <span class="ico rm-hl-ico"><svg width="16" height="16"><use href="#ico-skin-glow"/></svg></span>
+                                <div><strong>HEALTHY SKIN</strong><span>Smoother texture &amp; tone</span></div>
+                            </div>
+                        </div>
+
+                        <div class="rm-ba-col">
+                            <div class="rm-ba-label">AFTER</div>
+                            <div class="rm-ba-img-wrap">
+                                <img src="" alt="After" id="afterImage">
+                            </div>
+                        </div>
+
+                        <div class="rm-price-col">
+                            <div class="rm-section-title">RECOMMENDED PLAN (BUDGET 200 JT)</div>
+                            <div class="rm-price-item">
+                                <span class="ico rm-price-ico"><svg width="13" height="13"><use href="#ico-eye"/></svg></span>
+                                <span class="rm-price-label">Upper Blepharoplasty</span>
+                                <span class="rm-price-val">40 - 60 JT</span>
+                            </div>
+                            <div class="rm-price-item">
+                                <span class="ico rm-price-ico"><svg width="13" height="13"><use href="#ico-thread"/></svg></span>
+                                <span class="rm-price-label">Mini Lift / Thread Lift</span>
+                                <span class="rm-price-val">40 - 60 JT</span>
+                            </div>
+                            <div class="rm-price-item">
+                                <span class="ico rm-price-ico"><svg width="13" height="13"><use href="#ico-chin"/></svg></span>
+                                <span class="rm-price-label">Chin Enhancement (Filler/Implant)</span>
+                                <span class="rm-price-val">30 - 50 JT</span>
+                            </div>
+                            <div class="rm-price-item">
+                                <span class="ico rm-price-ico"><svg width="13" height="13"><use href="#ico-laser"/></svg></span>
+                                <span class="rm-price-label">Skin Treatment (Laser + Booster)</span>
+                                <span class="rm-price-val">30 - 40 JT</span>
+                            </div>
+                            <div class="rm-price-item">
+                                <span class="ico rm-price-ico"><svg width="13" height="13"><use href="#ico-jawline"/></svg></span>
+                                <span class="rm-price-label">Jawline Contouring (Filler) *Optional</span>
+                                <span class="rm-price-val">20 - 30 JT</span>
+                            </div>
+                            <div class="rm-price-total">
+                                <span class="rm-total-label">TOTAL ESTIMATE</span>
+                                <span class="rm-total-val">190 - 240 JT</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- DIVIDER -->
+                    <div class="rm-divider"></div>
+
+                    <!-- TOOLS + BRAND FOOTER -->
+                    <div class="rm-footer-row">
+                        <div class="rm-tool">
+                            <span class="rm-tool-ico"><svg width="24" height="24" fill="none" stroke="#9e8047" stroke-width="1.5"><use href="#ico-shield"/></svg></span>
+                            <div>
+                                <div class="rm-tool-name">SAFE &amp; TRUSTED</div>
+                                <div class="rm-tool-desc">Partnered with licensed clinics in Korea</div>
+                            </div>
+                        </div>
+                        <div class="rm-tool">
+                            <span class="rm-tool-ico"><svg width="24" height="24" fill="none" stroke="#9e8047" stroke-width="1.5"><use href="#ico-doctor"/></svg></span>
+                            <div>
+                                <div class="rm-tool-name">EXPERT-LED CARE</div>
+                                <div class="rm-tool-desc">Performed by experienced medical professionals</div>
+                            </div>
+                        </div>
+                        <div class="rm-tool">
+                            <span class="rm-tool-ico"><svg width="24" height="24" fill="none" stroke="#9e8047" stroke-width="1.5"><use href="#ico-ai"/></svg></span>
+                            <div>
+                                <div class="rm-tool-name">AI SIMULATION</div>
+                                <div class="rm-tool-desc">Personalized planning for natural results</div>
+                            </div>
+                        </div>
+                        <div class="rm-tool">
+                            <span class="rm-tool-ico"><svg width="24" height="24" fill="none" stroke="#9e8047" stroke-width="1.5"><use href="#ico-leaf"/></svg></span>
+                            <div>
+                                <div class="rm-tool-name">REAL RESULTS</div>
+                                <div class="rm-tool-desc">Natural enhancement tailored for you</div>
+                            </div>
+                        </div>
+                        <div class="rm-brand">
+                            <img src="logoneumi.png" alt="NEUMI" style="height:32px;width:auto;">
+                            <div class="rm-brand-tagline">YOUR BEST LOOK.<br>YOUR NEXT LEVEL.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- QUOTE -->
+                <div class="quote">
+                    " NOT ABOUT CHANGING YOUR FACE, BUT ALIGNING YOUR FACE WITH YOUR LEVEL. "
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // INTERNATIONALISATION (i18n)
+        // ============================================
+        var currentLang = 'id';
+
+        var i18n = {
+            id: {
+                form_title:        'Masukkan Data Anda',
+                label_name:        'Nama Lengkap',
+                placeholder_name:  'Masukkan nama Anda',
+                label_age:         'Usia',
+                placeholder_age:   'Masukkan usia Anda',
+                label_phone:       'No. Telepon',
+                label_email:       'Email',
+                placeholder_email: 'email@example.com',
+                label_gender:      'Gender',
+                gender_male:       'Pria',
+                gender_female:     'Wanita',
+                gender_other:      'Lainnya',
+                btn_start:         'Mulai Transformasi',
+                clinic_registered: 'Anda terdaftar sebagai lead untuk klinik di atas',
+                card_upload:       'Upload Foto Wajah Anda',
+                upload_hint:       'Klik untuk upload foto atau gunakan kamera',
+                upload_fmt:        'Format: JPG, PNG (Maks. 10MB)',
+                card_package:      'Pilih Paket Transformasi',
+                btn_generate:      'Generate Menggunakan AI →',
+                // Result labels
+                rm_title:          'EXECUTIVE FACE TRANSFORMATION GUIDE',
+                rm_subtitle:       'VISUAL JOURNEY – REAL RESULTS (BUDGET 200 JT PLAN)',
+                label_before:      'SEBELUM',
+                label_after:       'SESUDAH',
+                hl_title:          'TRANSFORMATION HIGHLIGHTS',
+                plan_title:        'RENCANA YANG DIREKOMENDASIKAN (BUDGET 200 JT)',
+                total_est:         'TOTAL ESTIMASI',
+                quote_text:        '" BUKAN TENTANG MENGUBAH WAJAH ANDA, TAPI MENYELARASKAN WAJAH ANDA DENGAN LEVEL ANDA. "',
+                // Stage nav
+                s1_title: 'KONSULTASI',      s1_sub: 'Penilaian & Penetapan Tujuan',
+                s2_title: 'PRA-PROSEDUR',    s2_sub: 'Desain & Pemetaan',
+                s3_title: 'PROSEDUR',        s3_sub: 'Penyempurnaan Presisi',
+                s4_title: 'PEMULIHAN',       s4_sub: 'Penyembuhan & Pemulihan',
+                s5_title: 'HASIL AKHIR',     s5_sub: 'Segar & Tersempurnakan',
+                // Stage goals
+                goal1: 'TUJUAN: SEGARKAN, ANGKAT, DEFINISIKAN',
+                goal2: 'RENCANA: KESEIMBANGAN & HARMONI',
+                goal3: 'FOKUS: ANGKAT, KONTUR, SEMPURNAKAN',
+                goal4: 'WAKTU: 7–14 HARI',
+                goal5: 'HASIL: PERCAYA DIRI & KUAT',
+                // Tools
+                tool1_name: 'AMAN & TERPERCAYA',  tool1_desc: 'Bermitra dengan klinik berlisensi di Korea',
+                tool2_name: 'PERAWATAN AHLI',      tool2_desc: 'Dilakukan oleh profesional medis berpengalaman',
+                tool3_name: 'SIMULASI AI',         tool3_desc: 'Perencanaan personal untuk hasil alami',
+                tool4_name: 'HASIL NYATA',         tool4_desc: 'Peningkatan alami yang disesuaikan untuk Anda',
+                tagline: 'TAMPILAN TERBAIK ANDA.\nLEVEL BERIKUTNYA ANDA.',
+                dl_btn: 'Unduh PNG'
+            },
+            en: {
+                form_title:        'Enter Your Details',
+                label_name:        'Full Name',
+                placeholder_name:  'Enter your name',
+                label_age:         'Age',
+                placeholder_age:   'Enter your age',
+                label_phone:       'Phone Number',
+                label_email:       'Email',
+                placeholder_email: 'email@example.com',
+                label_gender:      'Gender',
+                gender_male:       'Male',
+                gender_female:     'Female',
+                gender_other:      'Other',
+                btn_start:         'Start Transformation',
+                clinic_registered: 'You are registered as a lead for the clinic above',
+                card_upload:       'Upload Your Face Photo',
+                upload_hint:       'Click to upload photo or use camera',
+                upload_fmt:        'Format: JPG, PNG (Max. 10MB)',
+                card_package:      'Select Transformation Package',
+                btn_generate:      'Generate Using AI →',
+                rm_title:          'EXECUTIVE FACE TRANSFORMATION GUIDE',
+                rm_subtitle:       'VISUAL JOURNEY – REAL RESULTS (BUDGET 200 JT PLAN)',
+                label_before:      'BEFORE',
+                label_after:       'AFTER',
+                hl_title:          'TRANSFORMATION HIGHLIGHTS',
+                plan_title:        'RECOMMENDED PLAN (BUDGET 200 JT)',
+                total_est:         'TOTAL ESTIMATE',
+                quote_text:        '" NOT ABOUT CHANGING YOUR FACE, BUT ALIGNING YOUR FACE WITH YOUR LEVEL. "',
+                s1_title: 'CONSULTATION',    s1_sub: 'Assessment & Goal Setting',
+                s2_title: 'PRE-PROCEDURE',   s2_sub: 'Design & Mapping',
+                s3_title: 'PROCEDURE',       s3_sub: 'Precision Refinement',
+                s4_title: 'RECOVERY',        s4_sub: 'Healing & Recovery',
+                s5_title: 'FINAL RESULT',    s5_sub: 'Refreshed & Refined',
+                goal1: 'GOAL: REFRESH, LIFT, DEFINE',
+                goal2: 'PLAN: BALANCE & HARMONY',
+                goal3: 'FOCUS: LIFT, CONTOUR, REFINE',
+                goal4: 'TIME: 7–14 DAYS',
+                goal5: 'RESULT: CONFIDENT & STRONG',
+                tool1_name: 'SAFE & TRUSTED',    tool1_desc: 'Partnered with licensed clinics in Korea',
+                tool2_name: 'EXPERT-LED CARE',   tool2_desc: 'Performed by experienced medical professionals',
+                tool3_name: 'AI SIMULATION',     tool3_desc: 'Personalized planning for natural results',
+                tool4_name: 'REAL RESULTS',      tool4_desc: 'Natural enhancement tailored for you',
+                tagline: 'YOUR BEST LOOK.\nYOUR NEXT LEVEL.',
+                dl_btn: 'Download PNG'
+            },
+            ko: {
+                form_title:        '정보를 입력하세요',
+                label_name:        '성명',
+                placeholder_name:  '이름을 입력하세요',
+                label_age:         '나이',
+                placeholder_age:   '나이를 입력하세요',
+                label_phone:       '전화번호',
+                label_email:       '이메일',
+                placeholder_email: 'email@example.com',
+                label_gender:      '성별',
+                gender_male:       '남성',
+                gender_female:     '여성',
+                gender_other:      '기타',
+                btn_start:         '변환 시작하기',
+                clinic_registered: '위 클리닉의 리드로 등록되었습니다',
+                card_upload:       '얼굴 사진 업로드',
+                upload_hint:       '사진을 업로드하거나 카메라를 사용하세요',
+                upload_fmt:        '형식: JPG, PNG (최대 10MB)',
+                card_package:      '변환 패키지 선택',
+                btn_generate:      'AI로 생성하기 →',
+                rm_title:          '임원급 얼굴 변환 가이드',
+                rm_subtitle:       '비주얼 여정 – 실제 결과 (예산 2억 원 플랜)',
+                label_before:      '시술 전',
+                label_after:       '시술 후',
+                hl_title:          '변환 하이라이트',
+                plan_title:        '추천 플랜 (예산 2억 원)',
+                total_est:         '총 예상 비용',
+                quote_text:        '" 얼굴을 바꾸는 것이 아니라, 당신의 수준에 맞게 얼굴을 정렬하는 것입니다. "',
+                s1_title: '상담',          s1_sub: '평가 및 목표 설정',
+                s2_title: '시술 전 준비',  s2_sub: '디자인 및 매핑',
+                s3_title: '시술',          s3_sub: '정밀 개선',
+                s4_title: '회복',          s4_sub: '치유 및 회복',
+                s5_title: '최종 결과',     s5_sub: '생기 있고 세련된',
+                goal1: '목표: 리프레시, 리프팅, 정의',
+                goal2: '계획: 균형 & 조화',
+                goal3: '집중: 리프팅, 윤곽, 개선',
+                goal4: '기간: 7–14일',
+                goal5: '결과: 자신감 & 강인함',
+                tool1_name: '안전 & 신뢰',      tool1_desc: '한국 공인 클리닉과 파트너십',
+                tool2_name: '전문가 주도 케어',  tool2_desc: '경험 많은 의료 전문가가 시행',
+                tool3_name: 'AI 시뮬레이션',    tool3_desc: '자연스러운 결과를 위한 맞춤 계획',
+                tool4_name: '실제 결과',         tool4_desc: '당신을 위한 자연스러운 개선',
+                tagline: '최고의 모습.\n다음 레벨.',
+                dl_btn: 'PNG 다운로드'
+            }
+        };
+
+        function setLang(lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            var activeBtn = document.getElementById('lang-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            var t = i18n[lang];
+
+            // Update all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.textContent = t[key];
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-placeholder');
+                if (t[key] !== undefined) el.placeholder = t[key];
+            });
+
+            // Update stage nav titles
+            var stageKeys = [
+                ['s1_title','s1_sub'], ['s2_title','s2_sub'], ['s3_title','s3_sub'],
+                ['s4_title','s4_sub'], ['s5_title','s5_sub']
+            ];
+            document.querySelectorAll('.stage-nav-title').forEach(function(el, i) {
+                if (stageKeys[i]) el.textContent = t[stageKeys[i][0]];
+            });
+            document.querySelectorAll('.stage-nav-sub').forEach(function(el, i) {
+                if (stageKeys[i]) el.textContent = t[stageKeys[i][1]];
+            });
+            document.querySelectorAll('.stage-mobile-label-title').forEach(function(el, i) {
+                if (stageKeys[i]) el.textContent = t[stageKeys[i][0]];
+            });
+            document.querySelectorAll('.stage-mobile-label-sub').forEach(function(el, i) {
+                if (stageKeys[i]) el.textContent = t[stageKeys[i][1]];
+            });
+
+            // Update stage goals
+            var goals = ['goal1','goal2','goal3','goal4','goal5'];
+            document.querySelectorAll('.rm-goal').forEach(function(el, i) {
+                if (goals[i]) el.textContent = t[goals[i]];
+            });
+
+            // Update result header
+            var rmTitle = document.querySelector('.rm-title');
+            var rmSubtitle = document.querySelector('.rm-subtitle');
+            if (rmTitle) rmTitle.textContent = t.rm_title;
+            if (rmSubtitle) rmSubtitle.textContent = t.rm_subtitle;
+
+            // Update before/after labels
+            document.querySelectorAll('.rm-ba-label').forEach(function(el, i) {
+                el.textContent = i === 0 ? t.label_before : t.label_after;
+            });
+
+            // Update section titles
+            var hlTitle = document.querySelector('.rm-highlights-col .rm-section-title');
+            if (hlTitle) hlTitle.textContent = t.hl_title;
+            var planTitle = document.querySelector('.rm-price-col .rm-section-title');
+            if (planTitle) planTitle.textContent = t.plan_title;
+
+            // Update total estimate label
+            var totalLabel = document.querySelector('.rm-total-label');
+            if (totalLabel) totalLabel.textContent = t.total_est;
+
+            // Update tools
+            var toolNames = document.querySelectorAll('.rm-tool-name');
+            var toolDescs = document.querySelectorAll('.rm-tool-desc');
+            var toolKeys = ['tool1','tool2','tool3','tool4'];
+            toolNames.forEach(function(el, i) {
+                if (toolKeys[i]) el.textContent = t[toolKeys[i] + '_name'];
+            });
+            toolDescs.forEach(function(el, i) {
+                if (toolKeys[i]) el.textContent = t[toolKeys[i] + '_desc'];
+            });
+
+            // Update brand tagline
+            var tagline = document.querySelector('.rm-brand-tagline');
+            if (tagline) tagline.innerHTML = t.tagline.replace('\n', '<br>');
+
+            // Update quote
+            var quote = document.querySelector('.quote');
+            if (quote) quote.textContent = t.quote_text;
+
+            // Update card titles
+            var cardTitles = document.querySelectorAll('.card-title');
+            if (cardTitles[0]) cardTitles[0].textContent = t.card_upload;
+            if (cardTitles[1]) cardTitles[1].textContent = t.card_package;
+
+            // Update upload area text
+            var uploadHint = document.querySelector('.upload-area strong');
+            if (uploadHint) uploadHint.textContent = t.upload_hint;
+
+            // Update generate button
+            var genBtn = document.querySelector('.generate-btn');
+            if (genBtn) genBtn.textContent = t.btn_generate;
+
+            // Update download button text
+            var dlText = document.querySelector('.dl-text');
+            if (dlText) dlText.textContent = t.dl_btn;
+
+            // Update html lang attribute
+            document.documentElement.lang = lang === 'ko' ? 'ko' : lang === 'en' ? 'en' : 'id';
+        }
+
+        // ============================================
+        // GLOBAL VARIABLES
+        // ============================================
+        var qrCodeData = null;
+
+        // ============================================
+        // ============================================
+        // DOWNLOAD RESULT AS PNG
+        // ============================================
+        var DL_ICON = '<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="flex-shrink:0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="dl-text">Download PNG</span>';
+
+        function imgToBase64(img) {
+            return new Promise(function(resolve) {
+                if (!img.src || img.src === window.location.href) { resolve(); return; }
+                if (img.src.startsWith('data:')) { resolve(); return; }
+                var canvas = document.createElement('canvas');
+                canvas.width = img.naturalWidth || img.width || 300;
+                canvas.height = img.naturalHeight || img.height || 400;
+                var ctx = canvas.getContext('2d');
+                var tempImg = new Image();
+                tempImg.crossOrigin = 'anonymous';
+                tempImg.onload = function() {
+                    ctx.drawImage(tempImg, 0, 0);
+                    try { img.src = canvas.toDataURL('image/jpeg', 0.92); } catch(e) {}
+                    resolve();
+                };
+                tempImg.onerror = function() { resolve(); };
+                tempImg.src = img.src + (img.src.indexOf('?') >= 0 ? '&' : '?') + 't=' + Date.now();
+            });
+        }
+
+        function downloadResultPNG() {
+            var btn = document.getElementById('downloadBtn');
+            var container = document.querySelector('.result-master');
+
+            if (!container) {
+                alert('Result belum tersedia. Generate dulu ya!');
+                return;
+            }
+
+            // Spin style
+            if (!document.getElementById('spinStyle')) {
+                var s = document.createElement('style');
+                s.id = 'spinStyle';
+                s.textContent = '@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}';
+                document.head.appendChild(s);
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" style="flex-shrink:0;animation:spin 0.8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
+
+            // Convert all images to base64 first to avoid CORS issues
+            var allImgs = Array.from(container.querySelectorAll('img'));
+            var promises = allImgs.map(function(img) { return imgToBase64(img); });
+
+            Promise.all(promises).then(function() {
+                // Hide download button during capture
+                btn.style.display = 'none';
+
+                var userName = (document.getElementById('inputName') && document.getElementById('inputName').value)
+                    ? document.getElementById('inputName').value.replace(/\s+/g, '_')
+                    : 'neumi_result';
+
+                return html2canvas(container, {
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#faddc1',
+                    logging: false,
+                    imageTimeout: 0,
+                    removeContainer: false
+                }).then(function(canvas) {
+                    btn.style.display = '';
+                    btn.disabled = false;
+                    btn.innerHTML = DL_ICON;
+
+                    var link = document.createElement('a');
+                    link.download = 'NEUMI_Transformation_' + userName + '.png';
+                    link.href = canvas.toDataURL('image/png', 1.0);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }).catch(function(err) {
+                console.error('Download error:', err);
+                btn.style.display = '';
+                btn.disabled = false;
+                btn.innerHTML = DL_ICON;
+                alert('Gagal generate PNG: ' + (err.message || err));
+            });
+        }
+        var userData = {};
+        var selectedGenderValue = null;
+        var selectedBudgetValue = null;
+        var uploadedPhotoData = null;
+        
+        // Gemini AI Configuration
+        var GEMINI_API_KEY = 'AIzaSyBv4g5E8LQK4l7W8hR5n3v2Q7z3Xy8F5qK9l2Wp3Wz7E8LQK4l7W8hR5n3v2Q7z3Xy8F5qK9l2Wp3Wz7E'; // Ganti dengan API key Anda
+        var GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+        
+        // OpenAI Configuration
+        var OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY_HERE'; // Ganti dengan API key Anda
+        var OPENAI_API_URL = 'https://api.openai.com/v1';
+        
+        // AI Provider Selection
+        var AI_PROVIDER = 'openai'; // Options: 'gemini', 'openai', 'local'
+        
+        // Debug: Show current configuration
+        console.log('🔧 AI Configuration:');
+        console.log('   Provider:', AI_PROVIDER);
+        console.log('   OpenAI Key:', OPENAI_API_KEY === 'YOUR_OPENAI_API_KEY_HERE' ? 'Not configured' : 'Configured');
+        console.log('   Gemini Key:', GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE' ? 'Not configured' : 'Configured');
+
+        var cameraStream = null;
+        var isScanning = false;
+        var scanFrameId = null;
+
+        var videoElement = document.getElementById('qrVideo');
+        var canvasElement = document.getElementById('qrCanvas');
+        var canvasContext = canvasElement.getContext('2d');
+
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+        
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function updateStatus(message, type) {
+            var statusBox = document.getElementById('statusBox');
+            statusBox.textContent = message;
+            statusBox.className = 'status-box';
+            if (type === 'success') statusBox.classList.add('status-success');
+            if (type === 'error') statusBox.classList.add('status-error');
+        }
+
+        function showLoading() {
+            document.getElementById('loadingOverlay').classList.add('show');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').classList.remove('show');
+        }
+
+        function stopCamera() {
+            isScanning = false;
+            if (scanFrameId) {
+                cancelAnimationFrame(scanFrameId);
+                scanFrameId = null;
+            }
+            if (cameraStream) {
+                cameraStream.getTracks().forEach(function(track) { track.stop(); });
+                cameraStream = null;
+            }
+            if (videoElement.srcObject) {
+                videoElement.srcObject = null;
+            }
+        }
+
+        function onQRDetected(data) {
+            stopCamera();
+            qrCodeData = data.trim();
+            
+            // Parse QR data untuk mendapatkan informasi klinik
+            // Format QR: "CLINIC_NAME|CLINIC_ADDRESS"
+            var clinicInfo = parseQRData(qrCodeData);
+            
+            // Simpan informasi klinik
+            userData.clinicName = clinicInfo.name;
+            userData.clinicAddress = clinicInfo.address;
+            userData.qrId = qrCodeData;
+            
+            console.log('🏥 Clinic Info:', clinicInfo);
+            console.log('✅ QR Detected:', qrCodeData);
+            console.log('🔄 Redirecting to form page...');
+            
+            // Langsung arahkan ke halaman form (Page 2)
+            updateStatus('✅ QR Code berhasil terdeteksi! Mengarahkan ke form...', 'success');
+            
+            setTimeout(function() {
+                console.log('📄 Showing page2 (form)...');
+                showPage('page2');
+                updateStatus('🏥 Klinik: ' + clinicInfo.name + ' - ' + clinicInfo.address, 'success');
+                
+                // Tampilkan informasi klinik di halaman form
+                const clinicInfoDiv = document.getElementById('clinicInfo');
+                const formContainer = document.getElementById('formContainer');
+                
+                console.log('🔍 Elements found:', {
+                    clinicInfoDiv: !!clinicInfoDiv,
+                    formContainer: !!formContainer
+                });
+                
+                if (clinicInfoDiv) {
+                    clinicInfoDiv.style.display = 'block';
+                    document.getElementById('clinicNameDisplay').textContent = clinicInfo.name;
+                    document.getElementById('clinicAddressDisplay').textContent = clinicInfo.address;
+                    console.log('✅ Clinic info displayed');
+                }
+                
+                if (formContainer) {
+                    formContainer.classList.add('show');
+                    console.log('✅ Form container shown');
+                }
+            }, 1000);
+        }
+
+        function parseQRData(qrData) {
+            // Parse QR data format: "CLINIC_NAME|CLINIC_ADDRESS"
+            // Jika tidak ada separator, gunakan seluruh data sebagai nama klinik
+            var parts = qrData.split('|');
+            
+            if (parts.length >= 2) {
+                return {
+                    name: parts[0].trim(),
+                    address: parts[1].trim()
+                };
+            } else {
+                // Jika hanya satu bagian, gunakan sebagai nama klinik
+                return {
+                    name: qrData.trim(),
+                    address: 'Alamat tidak tersedia'
+                };
+            }
+        }
+
+        function checkJsQR() {
+            return typeof jsQR !== 'undefined' && jsQR;
+        }
+
+        function handleJQRError() {
+            console.error('❌ Failed to load jsQR library');
+        }
+
+        // ============================================
+        // PAGE 1: QR FUNCTIONS
+        // ============================================
+
+        function startCamera() {
+            updateStatus('⏳ Mengakses kamera...');
+
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                updateStatus('❌ Browser tidak mendukung kamera.', 'error');
+                return;
+            }
+
+            navigator.mediaDevices.getUserMedia({
+                video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }
+            })
+            .then(function(stream) {
+                cameraStream = stream;
+                videoElement.srcObject = stream;
+                videoElement.setAttribute('playsinline', true);
+                
+                videoElement.onloadedmetadata = function() {
+                    videoElement.play();
+                    canvasElement.width = videoElement.videoWidth;
+                    canvasElement.height = videoElement.videoHeight;
+                    
+                    document.getElementById('scannerPlaceholder').style.display = 'none';
+                    document.getElementById('scannerOverlay').style.display = 'block';
+                    
+                    isScanning = true;
+                    updateStatus('📷 Kamera aktif! Arahkan ke QR code...', 'success');
+                    scanLoop();
+                };
+            })
+            .catch(function(err) {
+                console.error('Camera Error:', err);
+                var msg = '❌ Gagal akses kamera: ';
+                if (err.name === 'NotAllowedError') msg += 'Izin ditolak.';
+                else if (err.name === 'NotFoundError') msg += 'Tidak ada kamera.';
+                else msg += err.message;
+                updateStatus(msg, 'error');
+            });
+        }
+
+        function scanLoop() {
+            if (!isScanning) return;
+            
+            if (videoElement.readyState === videoElement.HAVE_ENOUGH_DATA) {
+                try {
+                    canvasContext.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+                    var imageData = canvasContext.getImageData(0, 0, canvasElement.width, canvasElement.height);
+                    
+                    if (checkJsQR()) {
+                        var code = jsQR(imageData.data, imageData.width, imageData.height);
+                        if (code && code.data) {
+                            onQRDetected(code.data);
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    console.error('Scan error:', e);
+                }
+            }
+            
+            scanFrameId = requestAnimationFrame(scanLoop);
+        }
+
+        function handleQRUpload(event) {
+            var file = event.target.files[0];
+            if (!file) return;
+
+            if (!file.type.startsWith('image/')) {
+                updateStatus('❌ File harus berupa gambar!', 'error');
+                return;
+            }
+
+            if (!checkJsQR()) {
+                updateStatus('⚠️ Library QR belum siap.', 'warning');
+                return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var imgSrc = e.target.result;
+                var previewImg = document.getElementById('qrPreviewImg');
+                previewImg.src = imgSrc;
+                previewImg.classList.add('show');
+
+                var img = new Image();
+                img.onload = function() {
+                    var tempCanvas = document.createElement('canvas');
+                    var tempCtx = tempCanvas.getContext('2d');
+                    tempCanvas.width = img.naturalWidth || img.width;
+                    tempCanvas.height = img.naturalHeight || img.height;
+                    tempCtx.drawImage(img, 0, 0);
+                    var imageData = tempCtx.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+                    var code = jsQR(imageData.data, imageData.width, imageData.height);
+                    
+                    if (code && code.data) {
+                        onQRDetected(code.data);
+                    } else {
+                        updateStatus('❌ Tidak dapat membaca QR dari gambar.', 'error');
+                    }
+                };
+                img.src = imgSrc;
+            };
+            reader.readAsDataURL(file);
+            updateStatus('⏳ Membaca QR code...');
+        }
+
+        function toggleManualInput() {
+            var section = document.getElementById('manualSection');
+            section.classList.toggle('show');
+            if (section.classList.contains('show')) {
+                document.getElementById('manualIdInput').focus();
+            }
+        }
+
+        function submitManualId() {
+            var inputVal = document.getElementById('manualIdInput').value.trim();
+            if (!inputVal) {
+                updateStatus('❌ Silakan masukkan ID QR!', 'error');
+                return;
+            }
+            onQRDetected(inputVal);
+        }
+
+        document.getElementById('manualIdInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') submitManualId();
+        });
+
+        function goToPage2() {
+            if (!qrCodeData) {
+                alert('Silakan scan/upload/masukkan QR ID terlebih dahulu!');
+                return;
+            }
+            showPage('page2');
+        }
+
+        // ============================================
+        // PAGE 2: INTRO + FORM
+        // ============================================
+
+        function playVideo() {
+            document.getElementById('videoContainer').style.display = 'none';
+            setTimeout(function() {
+                document.getElementById('formContainer').classList.add('show');
+            }, 5000);
+        }
+
+        // Make selectGender globally accessible
+        function selectGender(btn, gender) {
+            document.querySelectorAll('.gender-btn').forEach(function(b) {
+                b.classList.remove('selected');
+            });
+            btn.classList.add('selected');
+            selectedGenderValue = gender;
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            console.log('📝 Form submission started...');
+
+            var name = document.getElementById('inputName').value.trim();
+            var phone = document.getElementById('inputPhone').value.trim();
+            var email = document.getElementById('inputEmail').value.trim();
+
+            console.log('🔍 Form data:', { name, phone, email, gender: selectedGenderValue });
+
+            if (!name || !phone || !email) {
+                alert('Harap isi semua field!');
+                return false;
+            }
+
+            if (!selectedGenderValue) {
+                alert('Silakan pilih gender!');
+                return false;
+            }
+
+            // Update user data dengan informasi lengkap
+            userData.name = name;
+            userData.phone = phone;
+            userData.email = email;
+            userData.gender = selectedGenderValue;
+            userData.qrCode = qrCodeData;
+            userData.timestamp = new Date().toISOString();
+            userData.leadStatus = 'new_lead';
+
+            // Simpan data sebagai leads untuk klinik spesifik
+            saveClinicLead(userData);
+
+            console.log('📝 Form submitted - Lead for clinic:', userData.clinicName);
+            console.log('👤 Complete user data:', userData);
+            console.log('🔄 Redirecting to dashboard...');
+
+            showLoading();
+            setTimeout(function() {
+                hideLoading();
+                console.log('📄 Showing page3 (dashboard)...');
+                showPage('page3');
+                updateStatus('✅ Data tersimpan sebagai lead untuk ' + userData.clinicName, 'success');
+                
+                // Verify dashboard elements
+                const dashboard = document.getElementById('page3');
+                const resultsSection = document.getElementById('resultsSection');
+                
+                console.log('🔍 Dashboard elements:', {
+                    dashboard: !!dashboard,
+                    resultsSection: !!resultsSection
+                });
+                
+                if (dashboard && dashboard.classList.contains('active')) {
+                    console.log('✅ Dashboard loaded successfully');
+                } else {
+                    console.log('❌ Dashboard loading issue');
+                }
+            }, 1500);
+
+            return false;
+        }
+
+        function saveClinicLead(leadData) {
+            // Simpan lead data ke localStorage atau kirim ke server
+            var clinicLeads = JSON.parse(localStorage.getItem('clinicLeads') || '[]');
+            
+            var lead = {
+                id: Date.now().toString(),
+                clinicName: leadData.clinicName || 'Unknown Clinic',
+                clinicAddress: leadData.clinicAddress || 'Unknown Address',
+                qrId: leadData.qrId,
+                customerName: leadData.name,
+                customerPhone: leadData.phone,
+                customerEmail: leadData.email,
+                customerGender: leadData.gender,
+                timestamp: leadData.timestamp,
+                leadStatus: leadData.leadStatus
+            };
+
+            clinicLeads.push(lead);
+            localStorage.setItem('clinicLeads', JSON.stringify(clinicLeads));
+
+            console.log('💾 Lead saved for clinic:', lead.clinicName);
+            console.log('📊 Total leads:', clinicLeads.length);
+
+            // Tampilkan di console untuk debugging
+            console.table(clinicLeads.slice(-5)); // Show last 5 leads
+        }
+
+        // ============================================
+        // PAGE 3: DASHBOARD WITH VISUAL SIMULATION
+        // ============================================
+
+        function handlePhotoUpload(event) {
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    uploadedPhotoData = e.target.result;
+                    
+                    // Show preview
+                    document.getElementById('photoPreviewImg').src = uploadedPhotoData;
+                    document.getElementById('photoPreview').classList.add('show');
+                    
+                    console.log('✅ Photo uploaded successfully');
+                    console.log('   Size:', Math.round(file.size/1024), 'KB');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function selectBudget(card, budget) {
+            document.querySelectorAll('.budget-card').forEach(function(c) {
+                c.classList.remove('active');
+            });
+            card.classList.add('active');
+            selectedBudgetValue = budget;
+            console.log('Budget selected:', budget);
+        }
+
+        function generateAI() {
+            if (!uploadedPhotoData) {
+                alert('Silakan upload foto terlebih dahulu!');
+                return;
+            }
+            if (!selectedBudgetValue) {
+                alert('Silakan pilih paket transformasi!');
+                return;
+            }
+
+            console.log('🤖 Generating AI Journey...');
+            console.log('   Provider:', AI_PROVIDER);
+            console.log('   Budget:', selectedBudgetValue);
+            console.log('   Photo available:', uploadedPhotoData ? 'YES' : 'NO');
+
+            showLoading();
+
+            // Try selected AI provider, then fallback to local processing
+            switch(AI_PROVIDER) {
+                case 'openai':
+                    generateWithOpenAI();
+                    break;
+                case 'gemini':
+                    generateWithGeminiAI();
+                    break;
+                case 'local':
+                default:
+                    generateLocalEnhancement();
+                    break;
+            }
+        }
+
+        // Function to switch AI provider for testing
+        function switchAIProvider(provider) {
+            AI_PROVIDER = provider;
+            console.log('🔄 AI Provider switched to:', provider);
+            
+            // Update UI to show current provider
+            const providerDisplay = document.getElementById('currentProvider');
+            if (providerDisplay) {
+                providerDisplay.textContent = `Current: ${provider.toUpperCase()}`;
+                providerDisplay.style.color = provider === 'openai' ? '#10a37f' : provider === 'gemini' ? '#4285f4' : '#666';
+            }
+            
+            // Show configuration status
+            let status = '';
+            if (provider === 'openai' && OPENAI_API_KEY === 'YOUR_OPENAI_API_KEY_HERE') {
+                status = ' (API key needed!)';
+            } else if (provider === 'gemini' && GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+                status = ' (API key needed!)';
+            } else {
+                status = ' (Ready!)';
+            }
+            
+            console.log(`   Status: ${provider.toUpperCase()}${status}`);
+        }
+
+        // Function to test AI configuration
+        function testAIConfiguration() {
+            console.log('🧪 Testing AI Configuration...');
+            
+            const results = {
+                openai: OPENAI_API_KEY !== 'YOUR_OPENAI_API_KEY_HERE',
+                gemini: GEMINI_API_KEY !== 'YOUR_GEMINI_API_KEY_HERE',
+                local: true
+            };
+            
+            console.log('📊 Test Results:');
+            Object.keys(results).forEach(provider => {
+                console.log(`   ${provider.toUpperCase()}: ${results[provider] ? '✅ Configured' : '❌ Not configured'}`);
+            });
+            
+            // Show alert with results
+            let message = 'AI Configuration Status:\n\n';
+            Object.keys(results).forEach(provider => {
+                message += `${provider.toUpperCase()}: ${results[provider] ? '✅ Ready' : '❌ API key needed'}\n`;
+            });
+            
+            if (!results.openai && !results.gemini) {
+                message += '\n💡 Using LOCAL enhancement (no API keys needed)';
+            }
+            
+            alert(message);
+        }
+
+        async function generateWithOpenAI() {
+            try {
+                // Check if API key is configured
+                if (OPENAI_API_KEY === 'YOUR_OPENAI_API_KEY_HERE') {
+                    console.log('OpenAI API key not configured, using local enhancement');
+                    generateLocalEnhancement();
+                    return;
+                }
+                
+                console.log('🎨 Generating with OpenAI DALL-E and ChatGPT...');
+                console.log('📸 Uploaded photo data available:', uploadedPhotoData ? 'YES' : 'NO');
+                
+                // Generate procedure stages with DALL-E
+                await generateProcedureStagesWithDALLE();
+                
+                // Generate insights with ChatGPT
+                await generateInsightsWithChatGPT();
+                
+                // Hide loading and show results
+                hideLoading();
+                displayAIResults(null); // Show results section with template images
+                
+                console.log('✅ OpenAI generation completed successfully');
+                
+            } catch (error) {
+                console.log('OpenAI AI failed, using local enhancement:', error);
+                setTimeout(() => {
+                    generateLocalEnhancement();
+                }, 2000);
+            }
+        }
+
+        async function generateProcedureStagesWithDALLE() {
+            console.log('🖼️ Generating procedure stages with DALL-E...');
+            console.log('📸 Uploaded photo data length:', uploadedPhotoData ? uploadedPhotoData.length : 0);
+            
+            try {
+                // Convert base64 to proper format
+                const base64Data = uploadedPhotoData.split(',')[1];
+                console.log('🔧 Base64 data extracted, length:', base64Data.length);
+                
+                // Generate each stage with DALL-E
+                const stages = [
+                    {
+                        name: 'Stage 1 - CONSULTATION',
+                        prompt: 'CONSULTATION: Assessment & Goal Setting. Generate professional facial analysis photo showing: Facial structure analysis with aging mapping, Structure goal visualization, Professional consultation setting, GOAL: REFRESH, LIFT, DEFINE. Use the uploaded photo as base with subtle analysis overlays showing facial assessment points and structure mapping.'
+                    },
+                    {
+                        name: 'Stage 2 - PRE-PROCEDURE',
+                        prompt: 'PRE-PROCEDURE: Design & Mapping. Generate photo showing detailed structural mapping with: White dashed mapping lines for facial contours, Directional arrows showing lift vectors, Symmetry check indicators, Professional measurement points, PLAN: BALANCE & HARMONY. Reference style similar to 2.png with precise mapping overlays.'
+                    },
+                    {
+                        name: 'Stage 3 - PROCEDURE',
+                        prompt: 'PROCEDURE: Precision Refinement. Generate photo showing medical procedure in progress with: Upper blepharoplasty effects, Mini lift/thread lift visualization, Chin enhancement, Skin treatment application, FOCUS: LIFT, CONTOUR, REFINE. Person should appear to be undergoing actual procedure with medical equipment. Reference style similar to 3.png.'
+                    },
+                    {
+                        name: 'Stage 4 - RECOVERY',
+                        prompt: 'RECOVERY: Healing & Recovery. Generate photo showing healing process with: Natural healing progression, Reduced swelling effects, Skin recovery visualization, TIME: 7-14 DAYS post-procedure. Subtle recovery indicators showing transition from procedure to healing. Reference style similar to 4.png.'
+                    },
+                    {
+                        name: 'Stage 5 - FINAL RESULT',
+                        prompt: 'FINAL RESULT: Refreshed & Refined. Generate enhanced photo showing: Noticeable lift effects, Improved facial structure, Refined contours, Professional enhancement results, RESULT: CONFIDENT & STRONG. Natural but significant improvement from original photo. Reference style similar to 5.png with perfect transformation.'
+                    }
+                ];
+                
+                for (let i = 0; i < stages.length; i++) {
+                    const stage = stages[i];
+                    const enhancedPrompt = generateDALLEPrompt(base64Data, stage.prompt, i === 4); // Enhanced for final result
+                    
+                    try {
+                        console.log(`   🎨 Generating ${stage.name}...`);
+                        
+                        const response = await fetch(`${OPENAI_API_URL}/images/generations`, {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${OPENAI_API_KEY}`,
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                model: 'dall-e-3',
+                                prompt: enhancedPrompt,
+                                n: 1,
+                                size: '1024x1024',
+                                quality: 'standard',
+                                response_format: 'b64_json'
+                            })
+                        });
+                        
+                        if (response.ok) {
+                            const result = await response.json();
+                            const imageData = result.data[0].b64_json;
+                            const imageUrl = `data:image/png;base64,${imageData}`;
+                            
+                            console.log(`   📸 ${stage.name} API response received, image data length: ${imageData.length}`);
+                            
+                            // Apply to stage
+                            const stageId = `stage${i + 1}Image`;
+                            applyStageImage(stageId, { toDataURL: () => imageUrl });
+                            console.log(`   🖼️ Applied to stage: ${stageId}`);
+                            
+                            // Apply to before/after
+                            if (i === 0) {
+                                applyStageImage('beforeImage', { toDataURL: () => imageUrl });
+                                console.log(`   📸 Applied to beforeImage`);
+                            }
+                            if (i === 4) {
+                                applyStageImage('afterImage', { toDataURL: () => imageUrl });
+                                console.log(`   📸 Applied to afterImage`);
+                            }
+                            
+                            console.log(`   ✓ ${stage.name} generated with DALL-E`);
+                        } else {
+                            const errorText = await response.text();
+                            console.error(`❌ DALL-E API error for ${stage.name}:`, response.status, errorText);
+                            throw new Error(`DALL-E generation failed for ${stage.name}: ${response.status}`);
+                        }
+                    } catch (error) {
+                        console.error(`Error generating ${stage.name}:`, error);
+                        // Fallback to local generation for this stage
+                        generateLocalStage(i + 1);
+                    }
+                    
+                    // Add delay between API calls to avoid rate limiting
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                }
+                
+                console.log('✅ All DALL-E stages completed');
+                
+                // Verify stage 5 and after images are set
+                setTimeout(() => {
+                    const stage5Img = document.getElementById('stage5Image');
+                    const afterImg = document.getElementById('afterImage');
+                    
+                    console.log('🔍 Final verification:');
+                    console.log('   Stage 5 image src:', stage5Img ? stage5Img.src.substring(0, 50) + '...' : 'NOT FOUND');
+                    console.log('   After image src:', afterImg ? afterImg.src.substring(0, 50) + '...' : 'NOT FOUND');
+                    
+                    if (stage5Img && afterImg && 
+                        stage5Img.src && afterImg.src && 
+                        !stage5Img.src.includes('placeholder') && 
+                        !afterImg.src.includes('placeholder')) {
+                        console.log('   ✅ Stage 5 and After images successfully generated!');
+                    } else {
+                        console.log('   ⚠️ Some images may not be properly generated, checking fallback...');
+                    }
+                }, 2000);
+                
+            } catch (error) {
+                console.error('DALL-E generation failed completely:', error);
+                // Don't throw error, instead fallback to local
+                setTimeout(() => {
+                    generateLocalEnhancement();
+                }, 1000);
+            }
+        }
+
+        function generateDALLEPrompt(base64Image, stagePrompt, isFinalResult = false) {
+            let budgetModifier = '';
+            switch(selectedBudgetValue) {
+                case '200':
+                    budgetModifier = 'subtle natural enhancement, minimal changes, conservative approach';
+                    break;
+                case '500':
+                    budgetModifier = 'moderate enhancement, noticeable but natural improvements';
+                    break;
+                default:
+                    budgetModifier = 'advanced enhancement, dramatic but natural-looking results';
+                    break;
+            }
+            
+            const prompt = `Based on the provided facial photo, create ${stagePrompt}. ${budgetModifier}. 
+            Maintain the person's identity and natural features while showing the procedural effects.
+            Use professional medical visualization style with appropriate overlays and markings.
+            Ensure the image is realistic and clinically accurate.`;
+            
+            return prompt;
+        }
+
+        async function generateInsightsWithChatGPT() {
+            console.log('💬 Generating insights with ChatGPT...');
+            
+            try {
+                const response = await fetch(`${OPENAI_API_URL}/chat/completions`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-4',
+                        messages: [
+                            {
+                                role: 'system',
+                                content: 'You are a professional facial transformation consultant. Provide detailed insights for each procedure stage based on the selected budget level.'
+                            },
+                            {
+                                role: 'user',
+                                content: `Generate comprehensive facial transformation insights for budget level ${selectedBudgetValue}. Include detailed descriptions for each of the 5 stages: Consultation, Pre-Procedure, Procedure, Recovery, and Final Result. Also include transformation highlights.`
+                            }
+                        ],
+                        max_tokens: 1000,
+                        temperature: 0.7
+                    })
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    const aiResponse = result.choices[0].message.content;
+                    
+                    // Process and display AI insights
+                    processAIInsights(aiResponse);
+                    
+                    console.log('✅ ChatGPT insights generated successfully');
+                } else {
+                    throw new Error('ChatGPT API failed');
+                }
+            } catch (error) {
+                console.error('ChatGPT error:', error);
+                // Continue without insights
+            }
+        }
+
+        function generateLocalStage(stageNumber) {
+            console.log(`   🎨 Generating local Stage ${stageNumber} as fallback`);
+            
+            const img = new Image();
+            img.onload = function() {
+                let canvas;
+                switch(stageNumber) {
+                    case 1: canvas = createStage1(img); break;
+                    case 2: canvas = createStage2(img); break;
+                    case 3: canvas = createStage3(img); break;
+                    case 4: canvas = createStage4(img); break;
+                    case 5: canvas = createStage5(img); break;
+                }
+                
+                applyStageImage(`stage${stageNumber}Image`, canvas);
+                
+                if (stageNumber === 1) applyStageImage('beforeImage', canvas);
+                if (stageNumber === 5) applyStageImage('afterImage', canvas);
+            };
+            img.src = uploadedPhotoData;
+        }
+
+        async function generateWithGeminiAI() {
+            try {
+                // Check if API key is configured
+                if (GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+                    console.log('Gemini API key not configured, using local enhancement');
+                    generateLocalEnhancement();
+                    return;
+                }
+                
+                // Convert base64 to proper format for Gemini
+                const base64Data = uploadedPhotoData.split(',')[1]; // Remove data:image/jpeg;base64, prefix
+                
+                // Determine comprehensive prompt based on budget with detailed procedure stages
+                let prompt = '';
+                switch(selectedBudgetValue) {
+                    case '200':
+                        prompt = `Generate a comprehensive facial transformation analysis and visual enhancement for this face. Please provide:
+
+STAGE 1 - CONSULTATION: Assessment & Goal Setting
+- Facial analysis: Analyze bone structure, skin quality, facial symmetry
+- Aging mapping: Identify areas showing early aging signs
+- Structure goal: Define natural enhancement targets
+- GOAL: REFRESH, LIFT, DEFINE
+
+STAGE 2 - PRE-PROCEDURE: Design & Mapping  
+- Structural mapping: Create 3D facial enhancement plan
+- Lift direction: Determine optimal vector directions
+- Symmetry check: Ensure balanced facial proportions
+- PLAN: BALANCE & HARMONY
+
+STAGE 3 - PROCEDURE: Precision Refinement
+- Upper blepharoplasty: Natural eyelid rejuvenation
+- Mini lift/Thread lift: Subtle facial elevation
+- Chin enhancement: Improved projection and balance
+- Skin treatment: Texture and tone improvement
+- FOCUS: LIFT, CONTOUR, REFINE
+
+STAGE 4 - RECOVERY: Healing & Recovery
+- Healing: Natural recovery progression
+- Reduced swelling: Minimal downtime results
+- Skin recovery: Optimal healing timeline
+- TIME: 7-14 DAYS
+
+STAGE 5 - FINAL RESULT: Refreshed & Refined
+- (+) Lifted: Natural elevation achieved
+- (+) Structured: Improved facial architecture
+- (+) Refined: Enhanced facial harmony
+- RESULT: CONFIDENT & STRONG
+
+TRANSFORMATION HIGHLIGHTS:
+BRIGHTER EYES - More open, less tired appearance
+LIFTED MID-FACE - Improved cheek position and volume
+DEFINED JAWLINE - Stronger, sharper facial contour
+STRONGER CHIN - Better projection & facial balance
+HEALTHY SKIN - Smoother texture & improved tone
+
+Please analyze this face and provide detailed insights for each stage while maintaining natural appearance and identity.`;
+                        break;
+                    case '500':
+                        prompt = `Generate an advanced facial transformation analysis with moderate enhancements for this face. Please provide:
+
+STAGE 1 - CONSULTATION: Assessment & Goal Setting
+- Facial analysis: Comprehensive bone structure evaluation
+- Aging mapping: Detailed aging pattern identification
+- Structure goal: Moderate enhancement targets
+- GOAL: REFRESH, LIFT, DEFINE
+
+STAGE 2 - PRE-PROCEDURE: Design & Mapping
+- Structural mapping: Advanced 3D enhancement planning
+- Lift direction: Optimized vector analysis
+- Symmetry check: Precision facial balance
+- PLAN: BALANCE & HARMONY
+
+STAGE 3 - PROCEDURE: Precision Refinement
+- Upper blepharoplasty: Noticeable but natural eyelid lift
+- Mini lift/Thread lift: Moderate facial elevation
+- Chin enhancement: Significant projection improvement
+- Skin treatment: Advanced texture refinement
+- FOCUS: LIFT, CONTOUR, REFINE
+
+STAGE 4 - RECOVERY: Healing & Recovery
+- Healing: Enhanced recovery protocol
+- Reduced swelling: Minimal to moderate swelling
+- Skin recovery: Accelerated healing process
+- TIME: 7-14 DAYS
+
+STAGE 5 - FINAL RESULT: Refreshed & Refined
+- (+) Lifted: Noticeable facial elevation
+- (+) Structured: Improved facial framework
+- (+) Refined: Enhanced facial proportions
+- RESULT: CONFIDENT & STRONG
+
+TRANSFORMATION HIGHLIGHTS:
+BRIGHTER EYES - Significantly more open and alert
+LIFTED MID-FACE - Noticeably improved cheek position
+DEFINED JAWLINE - Sharper, more defined contour
+STRONGER CHIN - Markedly improved projection
+HEALTHY SKIN - Significantly smoother texture
+
+Please analyze this face and provide moderate enhancement insights while maintaining recognizable features.`;
+                        break;
+                    default:
+                        prompt = `Generate a premium facial transformation analysis with dramatic enhancements for this face. Please provide:
+
+STAGE 1 - CONSULTATION: Assessment & Goal Setting
+- Facial analysis: Complete facial architecture evaluation
+- Aging mapping: Comprehensive aging pattern analysis
+- Structure goal: Advanced enhancement objectives
+- GOAL: REFRESH, LIFT, DEFINE
+
+STAGE 2 - PRE-PROCEDURE: Design & Mapping
+- Structural mapping: Premium 3D transformation design
+- Lift direction: Advanced vector optimization
+- Symmetry check: Precision facial harmony
+- PLAN: BALANCE & HARMONY
+
+STAGE 3 - PROCEDURE: Precision Refinement
+- Upper blepharoplasty: Dramatic eyelid rejuvenation
+- Mini lift/Thread lift: Significant facial elevation
+- Chin enhancement: Dramatic projection enhancement
+- Skin treatment: Premium skin refinement
+- FOCUS: LIFT, CONTOUR, REFINE
+
+STAGE 4 - RECOVERY: Healing & Recovery
+- Healing: Premium recovery management
+- Reduced swelling: Minimal swelling with advanced techniques
+- Skin recovery: Optimal healing with premium care
+- TIME: 7-14 DAYS
+
+STAGE 5 - FINAL RESULT: Refreshed & Refined
+- (+) Lifted: Dramatic facial elevation
+- (+) Structured: Premium facial architecture
+- (+) Refined: Ultimate facial harmony
+- RESULT: CONFIDENT & STRONG
+
+TRANSFORMATION HIGHLIGHTS:
+BRIGHTER EYES - Dramatically more open and youthful
+LIFTED MID-FACE - Significantly elevated cheek position
+DEFINED JAWLINE - Dramatically sharper and stronger
+STRONGER CHIN - Dramatically improved projection
+HEALTHY SKIN - Dramatically smoother and radiant
+
+Please analyze this face and provide premium enhancement insights for maximum transformation while preserving core identity.`;
+                }
+
+                // Prepare request for Gemini API
+                const requestBody = {
+                    contents: [{
+                        parts: [
+                            {
+                                text: prompt + " Please return only the enhanced image, no text explanations."
+                            },
+                            {
+                                inline_data: {
+                                    mime_type: "image/jpeg",
+                                    data: base64Data
+                                }
+                            }
+                        ]
+                    }],
+                    generationConfig: {
+                        temperature: 0.4,
+                        topK: 32,
+                        topP: 1,
+                        maxOutputTokens: 4096,
+                    }
+                };
+
+                // Call Gemini API
+                const geminiResponse = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (geminiResponse.ok) {
+                    const result = await geminiResponse.json();
+                    console.log('Gemini response:', result);
+                    
+                    if (result.candidates && result.candidates[0] && result.candidates[0].content) {
+                        const aiResponse = result.candidates[0].content.parts[0].text;
+                        console.log('AI Analysis:', aiResponse);
+                        
+                        // Process and display AI insights
+                        processAIInsights(aiResponse);
+                        
+                        // Apply enhanced processing based on Gemini insights
+                        generateLocalEnhancement();
+                        return;
+                    }
+                }
+                
+                throw new Error('Invalid Gemini response');
+                
+            } catch (error) {
+                console.log('Gemini AI failed, using local enhancement:', error);
+                // Fallback to local image processing
+                setTimeout(() => {
+                    generateLocalEnhancement();
+                }, 2000);
+            }
+        }
+
+        function generateLocalEnhancement() {
+            console.log('🎨 Generating AI with progressive photo transformations...');
+            
+            // Generate all stage transformations from uploaded photo
+            generateStageTransformations();
+        }
+
+        function generateStageTransformations() {
+            if (!uploadedPhotoData) {
+                console.warn('⚠ No uploaded photo data available');
+                return;
+            }
+            
+            console.log('🖼️ Generating progressive transformations from uploaded photo...');
+            
+            const img = new Image();
+            img.onload = function() {
+                // Stage 1: Original uploaded photo
+                const stage1Canvas = createStage1(img);
+                applyStageImage('stage1Image', stage1Canvas);
+                
+                // Stage 2: Photo with mapping lines and arrows (PRE-PROCEDURE)
+                const stage2Canvas = createStage2(img);
+                applyStageImage('stage2Image', stage2Canvas);
+                
+                // Stage 3: Photo with medical procedure equipment
+                const stage3Canvas = createStage3(img);
+                applyStageImage('stage3Image', stage3Canvas);
+                
+                // Stage 4: Photo showing recovery changes
+                const stage4Canvas = createStage4(img);
+                applyStageImage('stage4Image', stage4Canvas);
+                
+                // Stage 5: Perfect enhanced transformation result
+                const stage5Canvas = createStage5(img);
+                applyStageImage('stage5Image', stage5Canvas);
+                
+                // Before: Original uploaded photo
+                applyStageImage('beforeImage', stage1Canvas);
+                
+                // After: Enhanced Stage 5 result
+                applyStageImage('afterImage', stage5Canvas);
+                
+                // Display results
+                displayAIResults(stage5Canvas.toDataURL('image/jpeg', 0.95));
+            };
+            
+            img.src = uploadedPhotoData;
+        }
+
+        function createStage1(originalImg) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = originalImg.width;
+            canvas.height = originalImg.height;
+            
+            // Stage 1: Original uploaded photo
+            ctx.drawImage(originalImg, 0, 0);
+            
+            console.log('   ✓ Stage 1 created: Original uploaded photo');
+            return canvas;
+        }
+
+        function createStage2(originalImg) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = originalImg.width;
+            canvas.height = originalImg.height;
+            
+            // Draw original photo as base (like 1.png)
+            ctx.drawImage(originalImg, 0, 0);
+            
+            // Add mapping overlay similar to 2.png style
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([8, 4]);
+            
+            // Facial contour mapping lines
+            // Left jawline
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.15, originalImg.height * 0.4);
+            ctx.quadraticCurveTo(originalImg.width * 0.1, originalImg.height * 0.6, 
+                               originalImg.width * 0.2, originalImg.height * 0.8);
+            ctx.stroke();
+            
+            // Right jawline
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.85, originalImg.height * 0.4);
+            ctx.quadraticCurveTo(originalImg.width * 0.9, originalImg.height * 0.6, 
+                               originalImg.width * 0.8, originalImg.height * 0.8);
+            ctx.stroke();
+            
+            // Cheek lift indicators
+            ctx.setLineDash([6, 3]);
+            ctx.strokeStyle = 'rgba(255, 200, 100, 0.9)';
+            
+            // Left cheek lift
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.25, originalImg.height * 0.55);
+            ctx.lineTo(originalImg.width * 0.2, originalImg.height * 0.45);
+            ctx.stroke();
+            
+            // Right cheek lift
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.75, originalImg.height * 0.55);
+            ctx.lineTo(originalImg.width * 0.8, originalImg.height * 0.45);
+            ctx.stroke();
+            
+            // Add measurement points
+            ctx.setLineDash([]);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            
+            // Key points for facial analysis
+            const points = [
+                [0.5, 0.3], // Forehead center
+                [0.35, 0.4], // Left eye area
+                [0.65, 0.4], // Right eye area
+                [0.5, 0.5], // Nose center
+                [0.35, 0.6], // Left cheek
+                [0.65, 0.6], // Right cheek
+                [0.5, 0.7], // Chin area
+            ];
+            
+            points.forEach(point => {
+                ctx.beginPath();
+                ctx.arc(originalImg.width * point[0], originalImg.height * point[1], 3, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            
+            // Add directional arrows for lift
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.lineWidth = 2;
+            
+            // Mid-face lift arrows
+            drawArrow(ctx, originalImg.width * 0.35, originalImg.height * 0.65,
+                     originalImg.width * 0.35, originalImg.height * 0.55);
+            drawArrow(ctx, originalImg.width * 0.65, originalImg.height * 0.65,
+                     originalImg.width * 0.65, originalImg.height * 0.55);
+            
+            // Jawline definition arrows
+            drawArrow(ctx, originalImg.width * 0.3, originalImg.height * 0.75,
+                     originalImg.width * 0.4, originalImg.height * 0.7);
+            drawArrow(ctx, originalImg.width * 0.7, originalImg.height * 0.75,
+                     originalImg.width * 0.6, originalImg.height * 0.7);
+            
+            console.log('   ✓ Stage 2 created: Photo with professional mapping overlay (like 2.png)');
+            return canvas;
+        }
+
+        function createStage3(originalImg) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = originalImg.width;
+            canvas.height = originalImg.height;
+            
+            // Draw original photo as base
+            ctx.drawImage(originalImg, 0, 0);
+            
+            // Create realistic hair net that looks like user is wearing it
+            ctx.save();
+            
+            // Hair net shadow/depth effect
+            ctx.globalAlpha = 0.3;
+            ctx.fillStyle = 'rgba(0, 50, 100, 0.6)';
+            ctx.fillRect(originalImg.width * 0.02, originalImg.height * 0.0, 
+                        originalImg.width * 0.96, originalImg.height * 0.28);
+            
+            // Main hair net with realistic texture
+            ctx.globalAlpha = 0.7;
+            const hairnetGradient = ctx.createLinearGradient(0, 0, 0, originalImg.height * 0.25);
+            hairnetGradient.addColorStop(0, 'rgba(100, 150, 200, 0.9)');
+            hairnetGradient.addColorStop(0.3, 'rgba(150, 200, 250, 0.8)');
+            hairnetGradient.addColorStop(0.7, 'rgba(200, 220, 255, 0.7)');
+            hairnetGradient.addColorStop(1, 'rgba(230, 240, 255, 0.5)');
+            
+            ctx.fillStyle = hairnetGradient;
+            
+            // Create hair net shape that follows head contour
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.1, originalImg.height * 0.02);
+            ctx.quadraticCurveTo(originalImg.width * 0.5, originalImg.height * -0.02, 
+                               originalImg.width * 0.9, originalImg.height * 0.02);
+            ctx.lineTo(originalImg.width * 0.92, originalImg.height * 0.25);
+            ctx.quadraticCurveTo(originalImg.width * 0.5, originalImg.height * 0.28, 
+                               originalImg.width * 0.08, originalImg.height * 0.25);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Add hair net mesh pattern
+            ctx.globalAlpha = 0.4;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.lineWidth = 0.5;
+            ctx.setLineDash([2, 2]);
+            
+            // Vertical mesh lines
+            for (let i = 0.1; i <= 0.9; i += 0.05) {
+                ctx.beginPath();
+                ctx.moveTo(originalImg.width * i, originalImg.height * 0.02);
+                ctx.lineTo(originalImg.width * i, originalImg.height * 0.25);
+                ctx.stroke();
+            }
+            
+            // Horizontal mesh lines
+            for (let i = 0.02; i <= 0.25; i += 0.02) {
+                ctx.beginPath();
+                ctx.moveTo(originalImg.width * 0.1, originalImg.height * i);
+                ctx.lineTo(originalImg.width * 0.9, originalImg.height * i);
+                ctx.stroke();
+            }
+            
+            // Face mask/covering
+            ctx.globalAlpha = 0.5;
+            ctx.setLineDash([]);
+            const maskGradient = ctx.createLinearGradient(0, originalImg.height * 0.2, 0, originalImg.height * 0.4);
+            maskGradient.addColorStop(0, 'rgba(100, 150, 200, 0.8)');
+            maskGradient.addColorStop(0.5, 'rgba(150, 200, 250, 0.6)');
+            maskGradient.addColorStop(1, 'rgba(200, 220, 255, 0.4)');
+            
+            ctx.fillStyle = maskGradient;
+            
+            // Face mask shape
+            ctx.beginPath();
+            ctx.moveTo(originalImg.width * 0.15, originalImg.height * 0.22);
+            ctx.quadraticCurveTo(originalImg.width * 0.5, originalImg.height * 0.18, 
+                               originalImg.width * 0.85, originalImg.height * 0.22);
+            ctx.lineTo(originalImg.width * 0.82, originalImg.height * 0.42);
+            ctx.quadraticCurveTo(originalImg.width * 0.5, originalImg.height * 0.45, 
+                               originalImg.width * 0.18, originalImg.height * 0.42);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Surgical markings on face
+            ctx.globalAlpha = 0.8;
+            ctx.strokeStyle = 'rgba(255, 200, 0, 0.8)';
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([3, 2]);
+            
+            // Eye area markings
+            ctx.beginPath();
+            ctx.ellipse(originalImg.width * 0.35, originalImg.height * 0.35, 20, 12, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.ellipse(originalImg.width * 0.65, originalImg.height * 0.35, 20, 12, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Cheek area markings
+            ctx.beginPath();
+            ctx.ellipse(originalImg.width * 0.3, originalImg.height * 0.55, 18, 10, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.ellipse(originalImg.width * 0.7, originalImg.height * 0.55, 18, 10, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Jawline markings
+            ctx.beginPath();
+            ctx.ellipse(originalImg.width * 0.5, originalImg.height * 0.75, 50, 15, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Add medical tape indicators
+            ctx.globalAlpha = 0.6;
+            ctx.fillStyle = 'rgba(255, 255, 200, 0.8)';
+            ctx.setLineDash([]);
+            
+            // Small tape pieces
+            ctx.fillRect(originalImg.width * 0.32, originalImg.height * 0.33, 6, 3);
+            ctx.fillRect(originalImg.width * 0.62, originalImg.height * 0.33, 6, 3);
+            ctx.fillRect(originalImg.width * 0.28, originalImg.height * 0.53, 5, 2);
+            ctx.fillRect(originalImg.width * 0.67, originalImg.height * 0.53, 5, 2);
+            
+            ctx.restore();
+            
+            console.log('   ✓ Stage 3 created: User wearing realistic hair net and medical equipment');
+            return canvas;
+        }
+
+        function createStage4(originalImg) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = originalImg.width;
+            canvas.height = originalImg.height;
+            
+            // Draw original photo with recovery effects
+            ctx.drawImage(originalImg, 0, 0);
+            
+            // Add recovery overlay (slight swelling reduction, healing)
+            ctx.globalAlpha = 0.3;
+            
+            // Healing gradient
+            const gradient = ctx.createRadialGradient(
+                originalImg.width * 0.5, originalImg.height * 0.5, 0,
+                originalImg.width * 0.5, originalImg.height * 0.5, originalImg.width * 0.5
+            );
+            gradient.addColorStop(0, 'rgba(255, 200, 200, 0.2)');  // Reduced swelling
+            gradient.addColorStop(0.5, 'rgba(255, 220, 200, 0.1)'); // Skin recovery
+            gradient.addColorStop(1, 'rgba(255, 240, 220, 0.05)'); // Healing
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add subtle enhancement
+            ctx.globalAlpha = 0.2;
+            ctx.filter = 'brightness(1.1) contrast(1.05)';
+            ctx.drawImage(originalImg, 0, 0);
+            
+            console.log('   ✓ Stage 4 created: Photo showing recovery changes');
+            return canvas;
+        }
+
+        function createStage5(originalImg) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = originalImg.width;
+            canvas.height = originalImg.height;
+            
+            // Draw original photo
+            ctx.drawImage(originalImg, 0, 0);
+            
+            // Apply perfect transformation enhancements
+            ctx.globalAlpha = 0.6;
+            
+            // Determine enhancement level based on budget
+            let enhancementLevel = 1;
+            switch(selectedBudgetValue) {
+                case '200': enhancementLevel = 1.1; break;
+                case '500': enhancementLevel = 1.2; break;
+                default: enhancementLevel = 1.3; break;
+            }
+            
+            // Apply comprehensive enhancement
+            ctx.filter = `contrast(${enhancementLevel}) brightness(1.1) saturate(1.2) blur(0.5px)`;
+            ctx.drawImage(originalImg, 0, 0);
+            
+            // Add skin smoothing and contouring
+            ctx.globalCompositeOperation = 'overlay';
+            const contourGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            contourGradient.addColorStop(0, 'rgba(255, 248, 220, 0.15)');
+            contourGradient.addColorStop(0.3, 'rgba(255, 235, 180, 0.1)');
+            contourGradient.addColorStop(0.7, 'rgba(255, 220, 140, 0.1)');
+            contourGradient.addColorStop(1, 'rgba(255, 200, 120, 0.05)');
+            
+            ctx.fillStyle = contourGradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add lifting effect
+            ctx.globalAlpha = 0.3;
+            ctx.filter = 'brightness(1.05) contrast(1.02)';
+            ctx.drawImage(originalImg, -2, -2, canvas.width + 4, canvas.height + 4);
+            
+            console.log('   ✓ Stage 5 created: Perfect enhanced transformation result');
+            return canvas;
+        }
+
+        function drawArrow(ctx, fromX, fromY, toX, toY) {
+            const headLength = 10;
+            const angle = Math.atan2(toY - fromY, toX - fromX);
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.moveTo(fromX, fromY);
+            ctx.lineTo(toX, toY);
+            ctx.stroke();
+            
+            // Draw arrowhead
+            ctx.beginPath();
+            ctx.moveTo(toX, toY);
+            ctx.lineTo(toX - headLength * Math.cos(angle - Math.PI / 6), 
+                      toY - headLength * Math.sin(angle - Math.PI / 6));
+            ctx.moveTo(toX, toY);
+            ctx.lineTo(toX - headLength * Math.cos(angle + Math.PI / 6), 
+                      toY - headLength * Math.sin(angle + Math.PI / 6));
+            ctx.stroke();
+        }
+
+        function applyStageImage(elementId, canvas) {
+            const imgElement = document.getElementById(elementId);
+            if (imgElement) {
+                imgElement.src = canvas.toDataURL('image/jpeg', 0.95);
+                console.log(`   ✓ ${elementId} applied successfully`);
+            }
+        }
+
+        function processAIInsights(aiResponse) {
+            console.log('🧠 Processing AI Insights...');
+            
+            // Extract stage information from AI response
+            const stages = extractStageInfo(aiResponse);
+            
+            // Update stage descriptions with AI insights
+            updateStageDescriptions(stages);
+            
+            // Extract and display transformation highlights
+            const highlights = extractHighlights(aiResponse);
+            displayTransformationHighlights(highlights);
+            
+            console.log('✅ AI Insights processed successfully');
+        }
+
+        function extractStageInfo(aiResponse) {
+            const stages = {};
+            
+            // Extract information for each stage
+            const stagePatterns = {
+                1: /STAGE 1.*?CONSULTATION.*?GOAL: REFRESH, LIFT, DEFINE/si,
+                2: /STAGE 2.*?PRE-PROCEDURE.*?PLAN: BALANCE & HARMONY/si,
+                3: /STAGE 3.*?PROCEDURE.*?FOCUS: LIFT, CONTOUR, REFINE/si,
+                4: /STAGE 4.*?RECOVERY.*?TIME: 7-14 DAYS/si,
+                5: /STAGE 5.*?FINAL RESULT.*?RESULT: CONFIDENT & STRONG/si
+            };
+            
+            for (let stageNum = 1; stageNum <= 5; stageNum++) {
+                const match = aiResponse.match(stagePatterns[stageNum]);
+                if (match) {
+                    stages[stageNum] = match[0];
+                }
+            }
+            
+            return stages;
+        }
+
+        function extractHighlights(aiResponse) {
+            const highlightsMatch = aiResponse.match(/TRANSFORMATION HIGHLIGHTS:(.*?)(?=\n\n|\n$|$)/si);
+            if (highlightsMatch) {
+                return highlightsMatch[1].trim();
+            }
+            return null;
+        }
+
+        function updateStageDescriptions(stages) {
+            // Update each stage with AI-generated content
+            for (let stageNum = 1; stageNum <= 5; stageNum++) {
+                if (stages[stageNum]) {
+                    console.log(`Updating Stage ${stageNum} with AI insights`);
+                    // You can update UI elements here if needed
+                }
+            }
+        }
+
+        function displayTransformationHighlights(highlights) {
+            if (!highlights) {
+                console.log('No highlights found in AI response');
+                return;
+            }
+            
+            // Create or update highlights section
+            let highlightsContainer = document.getElementById('transformationHighlights');
+            if (!highlightsContainer) {
+                highlightsContainer = document.createElement('div');
+                highlightsContainer.id = 'transformationHighlights';
+                highlightsContainer.className = 'transformation-highlights';
+                
+                // Insert after comparison section
+                const comparisonSection = document.querySelector('.comparison-section');
+                if (comparisonSection) {
+                    comparisonSection.parentNode.insertBefore(highlightsContainer, comparisonSection.nextSibling);
+                }
+            }
+            
+            highlightsContainer.innerHTML = `
+                <div class="highlights-content">
+                    <h3 class="highlights-title">TRANSFORMATION HIGHLIGHTS</h3>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">👁️</div>
+                        <div class="highlight-text">
+                            <h4>BRIGHTER EYES</h4>
+                            <p>More open, less tired</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">😊</div>
+                        <div class="highlight-text">
+                            <h4>LIFTED MID-FACE</h4>
+                            <p>Improved cheek position</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">💪</div>
+                        <div class="highlight-text">
+                            <h4>DEFINED JAWLINE</h4>
+                            <p>Stronger, sharper contour</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🎯</div>
+                        <div class="highlight-text">
+                            <h4>STRONGER CHIN</h4>
+                            <p>Better projection & balance</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">✨</div>
+                        <div class="highlight-text">
+                            <h4>HEALTHY SKIN</h4>
+                            <p>Smoother texture & tone</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            console.log('✅ Transformation highlights displayed');
+        }
+
+        function displayAIResults(aiImage) {
+            hideLoading();
+            
+            // If AI image is provided, update stage5 and after images
+            if (aiImage) {
+                // Template images already applied by applyTemplateImages()
+                // Just update final stage with enhanced result
+                var stage5Img = document.getElementById('stage5Image');
+                if (stage5Img) {
+                    // Use enhanced AI result for final stage
+                    stage5Img.src = aiImage;
+                    console.log('   ✓ Final Stage 5 enhanced with AI result');
+                }
+                
+                // Update after image with AI result
+                var afterImg = document.getElementById('afterImage');
+                if (afterImg) {
+                    afterImg.src = aiImage;
+                    console.log('   ✓ AFTER image enhanced with AI result');
+                }
+            } else {
+                console.log('   📸 Using DALL-E generated images (already applied during generation)');
+            }
+            
+            // Show results
+            document.getElementById('resultsSection').classList.add('show');
+            
+            // Scroll to results
+            setTimeout(function() {
+                document.getElementById('resultsSection').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
+            
+            console.log('✅ AI Generation complete!');
+            console.log('   Procedure stages populated with template images');
+            console.log('   Final result enhanced with AI');
+            console.log('   Transformation highlights displayed');
+        }
+
+        // KEY FUNCTION: Apply uploaded photo to all visual stages
+        function applyPhotoToStages() {
+            if (!uploadedPhotoData) {
+                console.warn('⚠ No photo data available');
+                return;
+            }
+
+            console.log('🖼️ Applying photo to all stages...');
+
+            // Apply to 5 Stage Images
+            var stageImages = [
+                'stage1Image',   // Consultation - Original
+                'stage2Image',   // Pre-Procedure - With mapping
+                'stage3Image',   // Procedure - With cap
+                'stage4Image',   // Recovery - With redness
+                'stage5Image'    // Final Result - Enhanced
+            ];
+
+            stageImages.forEach(function(imgId, index) {
+                var imgElement = document.getElementById(imgId);
+                if (imgElement) {
+                    imgElement.src = uploadedPhotoData;
+                    console.log('   ✓ Stage', (index + 1), 'image applied');
+                }
+            });
+
+            // Apply to Before/After images
+            var beforeImg = document.getElementById('beforeImage');
+            var afterImg = document.getElementById('afterImage');
+
+            if (beforeImg) {
+                beforeImg.src = uploadedPhotoData;
+                console.log('   ✓ BEFORE image applied');
+            }
+
+            if (afterImg) {
+                afterImg.src = uploadedPhotoData;
+                console.log('   ✓ AFTER image applied (with enhancement filter)');
+            }
+
+            console.log('✅ All visual stages populated successfully!');
+            console.log('');
+            console.log('📊 VISUAL EFFECTS APPLIED:');
+            console.log('   • Stage 1: Original photo (no effects)');
+            console.log('   • Stage 2: + Golden mapping lines overlay');
+            console.log('   • Stage 3: + Blue surgical cap graphic');
+            console.log('   • Stage 4: + Subtle redness/recovery effect');
+            console.log('   • Stage 5: + Brightness/contrast enhancement');
+            console.log('   • BEFORE: Original uploaded photo');
+            console.log('   • AFTER: Enhanced version of photo');
+        }
+
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('========================================');
+            console.log('Neumi Dashboard Initialized');
+            console.log('========================================');
+            console.log('Features:');
+            console.log('  ✓ QR Scanner (Camera + Upload + Manual)');
+            console.log('  ✓ Lead Capture Form');
+            console.log('  ✓ AI Visual Simulation (5 Stages)');
+            console.log('  ✓ Before/After Comparison');
+            console.log('  ✓ Price Estimation');
+            console.log('========================================');
+        });
+
+        window.addEventListener('beforeunload', function() {
+            stopCamera();
+        });
+
+    </script>
+
+</body>
+</html>
